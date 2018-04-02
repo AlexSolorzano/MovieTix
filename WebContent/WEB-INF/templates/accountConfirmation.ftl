@@ -36,10 +36,16 @@
             <div class="col md-5">
                  <div class="panel-group">
                     <div class="panel panel-default">
-                    <div class="panel-heading"><center><h1>Purchase Confirmation</h1></center> </div>
+                    <div class="panel-heading"><center><h3>Account Confirmation</h3></center> </div>
                         
-                    <div class="panel-body"><center><h3>Thank you for shopping with us today! We appreciate you picking MovieTix as your movie ticket provider. Please check your email for a receipt of your order.</h3><br>
-                       <a href="/MovieTix/home"><h4>Go Back Home</h4></a> 
+                    <div class="panel-body"><center><h4>Thank you for creating an account on MovieTix. <br> Please check your email for a verification code. <br> Enter your code below.</h4><br>
+                        <form> 
+                        <input type="text" placeholder="Verification Code">
+                        <button type="submit" class="btn btn-primary">SUBMIT</button> 
+                        </form>
+                        <br>
+                        <br>
+                        <button type="submit" class="btn btn-danger">Resend Code</button>
                         </center></div>
                 </div>
                 </div>

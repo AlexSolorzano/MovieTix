@@ -21,7 +21,7 @@
         margin: auto;
     }
     .container {
-  background: linear-gradient(rgba(255, 255, 255, .0), rgba(255, 255, 255, 0.9)), url("Resources/img/popcorn.jpg");
+  background: linear-gradient(rgba(255, 255, 255, .0), rgba(255, 255, 255, 0.9)), url("../Resources/img/popcorn.jpg");
   padding: 150px 50px 100px 50px;
 }
 </style>

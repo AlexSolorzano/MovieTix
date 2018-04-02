@@ -6,7 +6,7 @@ import javax.servlet.annotation.*;
 import freemarker.template.*;
 import java.sql.*;
 
-@WebServlet("/home")
+@WebServlet("/purchaseConfirmation")
 public class home extends HttpServlet{
 	Configuration cfg;
 	HashMap map;
@@ -25,10 +25,10 @@ public class home extends HttpServlet{
 		
 		try 
 		{
-			map.put("person", "Marcus ");
+		        //map.put("person", "Marcus ");
 			//map.put(5, "hi");
 
-			Template template = cfg.getTemplate("index.ftl");
+			Template template = cfg.getTemplate("purchaseConfirmation.ftl");
 			template.process(map,out);
 		}
 		catch(Exception e)

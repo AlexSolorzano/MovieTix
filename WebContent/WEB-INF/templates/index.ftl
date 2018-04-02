@@ -92,11 +92,9 @@
         <ul class="nav-menu">
           <li class="menu-active"><a href="#hero">Home</a></li>
           <li><a href="#about">About Us</a></li>
-        <li class="menu-has-children"><a href="">Sign In</a>
+        <li class="menu-has-children"><a href="#signIn">${person}</a>
             <ul>
-              <li><a href="/MovieTix/profile>My Account</a></li>
-              <li><a href="#">My Orders</a></li>
-              <li><a href="#">Cancel Ticket </a></li>
+              <li><a href="/MovieTix/profile">My Account</a></li>
             </ul>
           </li>
           <li><a href="#movieListing">Movie Listings</a></li>
@@ -151,11 +149,11 @@
                         <form id="loginform" class="form-horizontal" role="form">                          
                             <div style="margin-bottom: 25px" class="input-group">
                                         <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                                        <input id="login-username" type="text" class="form-control" name="username" value="" placeholder="username or email">                                        
+                                        <input  type="text" class="form-control" name="username" id="username" value="" placeholder="username or email">                                        
                             </div>                      
                             <div style="margin-bottom: 25px" class="input-group">
                                         <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
-                                        <input id="login-password" type="password" class="form-control" name="password" placeholder="password">
+                                        <input type="password" class="form-control" name="password" placeholder="password" id="password">
                                     </div>     
                             <div class="input-group">
                                       <div class="checkbox">
@@ -169,8 +167,9 @@
                                 <div style="margin-top:10px" class="form-group">
                                     <!-- Button -->
                                     <div class="col-sm-12 controls">
-                                      <a id="btn-login" href="/MovieTix/profile" class="btn btn-success">Sign In  </a>
-                                        <!--<a id="btn-fblogin" href="#" class="btn btn-primary">Login with Facebook</a>-->
+                                      <button id="submitSignIn" class="btn btn-success">Sign In  </button>
+                                        
+                                        <h5 id="message1"></h5>
 
                                     </div>
                                 </div>
@@ -209,47 +208,53 @@
                                 <div class="form-group">
                                     <label for="email" class="col-md-3 control-label">*Email</label>
                                     <div class="col-md-9">
-                                        <input type="text" class="form-control" name="email" placeholder="Email Address">
+                                        <input type="text" class="form-control" name="emailInput" placeholder="Email Address" id="emailInput">
                                     </div>
                                 </div>
                                     
-                                <div class="form-group">
+                                <div class="form-group" >
                                     <label for="firstname" class="col-md-3 control-label">*First Name</label>
                                     <div class="col-md-9">
-                                        <input type="text" class="form-control" name="firstname" placeholder="First Name">
+                                        <input type="text" class="form-control" name="firstnameInput" placeholder="First Name" id="firstNameInput">
                                     </div>
                                 </div>
-                                <div class="form-group">
+                                <div class="form-group" >
                                     <label for="lastname" class="col-md-3 control-label">*Last Name</label>
                                     <div class="col-md-9">
-                                        <input type="text" class="form-control" name="lastname" placeholder="Last Name">
+                                        <input type="text" class="form-control" name="lastnameInput" placeholder="Last Name" id="lastNameInput">
                                     </div>
                                 </div>
-                                <div class="form-group">
+                                <div class="form-group" >
                                     <label for="password" class="col-md-3 control-label">*Password</label>
                                     <div class="col-md-9">
-                                        <input type="password" class="form-control" name="passwd" placeholder="Password">
+                                        <input type="password" class="form-control" name="passwordInput" placeholder="Password" id="psswd">
                                     </div>
                                 </div>
                                     
                                    <div class="form-group">
                                     <label for="password" class="col-md-3 control-label">*Confirm Password</label>
                                     <div class="col-md-9">
-                                        <input type="password" class="form-control" name="passwd" placeholder="Confirm password">
+                                        <input type="password" class="form-control" name="passwd" placeholder="Confirm password" id="psswdCon">
                                     </div>
                                 </div>
-
+                                <center>
+                                    <button type="button" id="submitSignUp" type="submit" class="btn btn-success">Sign Up</button>
+                                    <br>
+                                    <h5 id="message"></h5>
+                                 </center>
+                                
+                                <!-- FANCY BUTTON STARTS HERE -->
                                 <div class="form-group">
                                     <!-- Button -->                                        
                                     <div class="col-md-offset-3 col-md-9">
-                                          <!-- Trigger the modal with a button -->
-                                        <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Sign Up</button>
-
+                                          
                                         <!-- Modal -->
-                                        <div class="modal fade" id="myModal" role="dialog">
+                                        <!-- Trigger the modal with a button -->
+                                        <!--<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal" id="signUpButton">Sign Up</button>
+                                        <!--<div class="modal fade" id="myModal" role="dialog">
                                             <div class="modal-dialog">
                                             <!-- Modal content-->
-                                            <div class="modal-content">
+                                            <!--<div class="modal-content">
                                                 <div class="modal-header">
                                                     <button type="button" class="close" data-dismiss="modal">&times;</button>
                                                     <h4 class="modal-title">Account Confirmation</h4>
@@ -262,7 +267,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        </div>
+                                        </div>-->
                                         <span style="margin-left:8px;"></span>  
                                     </div>
                                 
@@ -322,7 +327,7 @@
 
       <div class="row">
         <div class="col-md-2">
-          <a class="portfolio-item" style="background-image: url(Resources/img/blackPanther.jpg);" href="moviePage.html">
+          <a class="portfolio-item" style="background-image: url(Resources/img/blackPanther.jpg);" href="/MovieTix/moviePage">
             <div class="details">
               <h4>Black Panther</h4>
               <span>February 16th</span>
@@ -569,14 +574,12 @@
   <script src="Resources/lib/superfish/superfish.min.js"></script>
   <script src="Resources/lib/morphext/morphext.min.js"></script>
   <script src="Resources/lib/wow/wow.min.js"></script>
-  <script src="Resourceslib/stickyjs/sticky.js"></script>
+  <script src="Resources/lib/stickyjs/sticky.js"></script>
   <script src="Resources/lib/easing/easing.js"></script>
 
   <!-- Template Specisifc Custom Javascript File -->
   <script src="Resources/js/custom.js"></script>
-
-  <script src="contactform/contactform.js"></script>
-
+  <script src="Resources/js/home.js"></script>
 
 </body>
 
