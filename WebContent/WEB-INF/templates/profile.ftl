@@ -161,7 +161,7 @@
 
                     </div>
                     <div class="panel-body">
-                        <a href="admin.html" class="label label-success"> <span >  Access Admin Tools  </span></a>
+                        <a href="/MovieTix/admin" class="label label-success"> <span >  Access Admin Tools  </span></a>
                     </div>
                 </div>
 
@@ -189,7 +189,7 @@
 
                     </div>
                     <div class="panel-body">
-                        <a href="admin.html" class="label label-success"> <span >  Access Admin Tools  </span></a>
+                        <a href="/MovieTix/admin" class="label label-success"> <span >  Access Admin Tools  </span></a>
                     </div>
                 </div>
 
@@ -278,12 +278,12 @@
                     </div>
                     <div class="panel-body">
                         Do you really want to logout ?  
-                        <a  href="index.html" class="label label-danger" >
+                        <a  href="/MovieTix/home" class="label label-danger" >
                         <!--onclick="event.preventDefault();document.getElementById('logout-form').submit()-->
                             
                             <span >   Yes   </span>
                         </a>    
-                        <a href="admin.html" class="label label-success"> <span >  No   </span></a>
+                        <a href="/MovieTix/admin" class="label label-success"> <span >  No   </span></a>
                     </div>
                     <form id="logout-form" action="#" method="POST" style="display: none;">
                     </form>
@@ -297,10 +297,10 @@
                     </div>
                     <div class="panel-body">
                        Are you sure you want to go home?  
-                        <a  href="index.html" class="label label-danger">
+                        <a  href="/MovieTix/home" class="label label-danger">
                             <span >  Yes </span>
                         </a>
-                        <a  href="profile.html" class="label label-success">
+                        <a  href="/MovieTix/profile" class="label label-success">
                             <span> No </span>
                         </a>
                       </div>

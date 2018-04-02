@@ -255,7 +255,7 @@
                                                     <h4 class="modal-title">Account Confirmation</h4>
                                                 </div>
                                                     <div class="modal-body">
-                                                        <p>You've officially been signed up, proceed to the login page.</p>
+                                                        <p>Please check your email for account confirmation.</p>
                                                     </div>
                                                 <div class="modal-footer">
                                                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -322,7 +322,7 @@
 
       <div class="row">
         <div class="col-md-2">
-          <a class="portfolio-item" style="background-image: url(Resources/img/blackPanther.jpg);" href="moviePage.html">
+          <a class="portfolio-item" style="background-image: url(Resources/img/blackPanther.jpg);" href="/MovieTix/moviePage">
             <div class="details">
               <h4>Black Panther</h4>
               <span>February 16th</span>
@@ -424,7 +424,7 @@
           </a>
         </div>
             <div class="col-md-2">
-          <a class="portfolio-item" style="background-image: url(../Resources/img/greatestShowman.jpg);" href="">
+          <a class="portfolio-item" style="background-image: url(Resources/img/greatestShowman.jpg);" href="">
             <div class="details">
               <h4>The Greatest Showman</h4>
               <span>December 20th</span>

@@ -29,15 +29,15 @@
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800" rel="stylesheet">
 
   <!-- Bootstrap CSS File -->
-  <link href="../Resources/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="Resources/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
   <!-- Libraries CSS Files -->
-  <link href="../Resources/lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-  <link href="../Resources/lib/animate-css/animate.min.css" rel="stylesheet">
+  <link href="Resources/lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="Resources/lib/animate-css/animate.min.css" rel="stylesheet">
     
   <!-- Main Stylesheet File -->
-  <link href="../Resources/css/style.css" rel="stylesheet">
-  <link href="../Resources/css/purchase.css" rel="stylesheet">
+  <link href="Resources/css/style.css" rel="stylesheet">
+  <link href="Resources/css/purchase.css" rel="stylesheet">
   <link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
   <script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>    
   <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
@@ -119,7 +119,7 @@
       <nav id="nav-menu-container">
         <ul class="nav-menu">
           <li class="menu-active"><a href="#hero"></a></li>
-            <li><a href="index.html">Home </a></li>
+            <li><a href="/MovieTix/home">Home </a></li>
             <li><a href="#upcomingMovies">Payment Information </a></li>
             <li><a href="#movieListings">Order Summary</a></li>
             <li><a href="#subscribe">Submit Payment</a></li>         
@@ -373,7 +373,7 @@
 					</tfoot>
 
 				</table>
-                <a href="index.html"><button class="btn btn-warning">CANCEL ORDER</button><br></a>
+                <a href="/MovieTix/home"><button class="btn btn-warning">CANCEL ORDER</button><br></a>
 
             <br>
             <br>
@@ -393,7 +393,7 @@
           <p class="subscribe-text"> Be sure to review your order at the top before hitting this button</p>
         </div>
         <div class="col-md-4 subscribe-btn-container">
-          <a class="subscribe-btn" href="purchaseConfirmation.html">SUBMIT PAYMENT</a>
+          <a class="subscribe-btn" href="/MovieTix/purchaseConfirmation">SUBMIT PAYMENT</a>
             
         </div>
       </div>
@@ -420,16 +420,16 @@
   <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
 
   <!-- Required JavaScript Libraries -->
-  <script src="../Resources/lib/jquery/jquery.min.js"></script>
-  <script src="../Resources/lib/bootstrap/js/bootstrap.min.js"></script>
-  <script src="../Resources/lib/superfish/hoverIntent.js"></script>
-  <script src="../Resources/lib/superfish/superfish.min.js"></script>
-  <script src="../Resources/lib/morphext/morphext.min.js"></script>
-  <script src="../Resources/lib/wow/wow.min.js"></script>
-  <script src="../Resources/lib/stickyjs/sticky.js"></script>
-  <script src="../Resources/lib/easing/easing.js"></script>
+  <script src="Resources/lib/jquery/jquery.min.js"></script>
+  <script src="Resources/lib/bootstrap/js/bootstrap.min.js"></script>
+  <script src="Resources/lib/superfish/hoverIntent.js"></script>
+  <script src="Resources/lib/superfish/superfish.min.js"></script>
+  <script src="Resources/lib/morphext/morphext.min.js"></script>
+  <script src="Resources/lib/wow/wow.min.js"></script>
+  <script src="Resources/lib/stickyjs/sticky.js"></script>
+  <script src="Resources/lib/easing/easing.js"></script>
 
   <!-- Template Specisifc Custom Javascript File -->
-  <script src="../Resources/js/custom.js"></script>
+  <script src="Resources/js/custom.js"></script>
 </body>
 </html>

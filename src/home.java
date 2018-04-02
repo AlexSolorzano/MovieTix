@@ -25,6 +25,24 @@ public class home extends HttpServlet{
 		
 		try 
 		{
+		    String username= request.getParameter("username");//add these to ftl 
+		    String passwordSignIn = request.getParameter("password");// add these to ftl
+		    
+		    String email = request.getParameter("emailInput");
+		    String firstName = request.getParameter("firstnameInput");
+		    String lastName = request.getParameter("lastnameInput");
+		    String password = request.getParameter("passwordInput");
+		    //Here I'm going to have an if statement to create a user and add to the database
+		    if ( email != null)//SIGN UP SECTION
+			{
+                System.out.println("finesse");
+			    response.sendRedirect("/MovieTix/accountConfirmation");
+			}
+		    else if (username != null)//SIGN IN SECTION
+			{
+			    response.sendRedirect("/MovieTix/profile");
+			}
+		    
 			map.put("person", "Marcus ");
 			//map.put(5, "hi");
 

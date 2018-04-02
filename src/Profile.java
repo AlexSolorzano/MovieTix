@@ -7,7 +7,7 @@ import freemarker.template.*;
 import java.sql.*;
 
 @WebServlet("/profile")
-public class Profile extends HttpServlet{
+public class profile extends HttpServlet{
 	Configuration cfg;
 	HashMap map;
 	
