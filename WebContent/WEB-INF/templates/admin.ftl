@@ -59,17 +59,10 @@
   ============================-->
   <header id="header">
     <div class="container">
-
-      <div id="logo" class="pull-left">
-       <!-- <a href="#hero"><img src="img/logo.png" alt="" title="" /></img></a>-->
-        <!-- Uncomment below if you prefer to use a text image -->
-        <!--<h1><a href="#hero">Header 1</a></h1>-->
-      </div>
-
-      <nav id="nav-menu-container">
+<nav id="nav-menu-container">
         <ul class="nav-menu">
           <li class="menu-active"><a href="#hero"></a></li>
-            <li><a href="MovieTix/home">Home </a></li>
+            <li><a href="/MovieTix/home">Home </a></li>
           <li><a href="#movieListing">Users</a></li> 
             <li><a href="#upcomingMovies">Company Performance</a></li>
             <li><a href="#about">Manage Movies</a></li>
@@ -98,8 +91,8 @@
          <div class="row">
                   <div class="col-md-10"></div>
                   <div class="col-md-2">
-                      <button type="button" class="btn btn-warning">EDIT</button>
-                      <button type="button" class="btn btn-success">SAVE</button>
+                      <button type="button" class="btn btn-warning">DELETE</button>
+                      <button type="button" class="btn btn-success">ADD</button>
                   </div>
               </div>    
       <div class="row">
@@ -159,9 +152,7 @@
       </div>
     </div>
     </section>
-    <section id="about">
-        <br>
-        <br>
+    <section id="movieListing">
     <div class="container wow fadeInUp">
       <div class="row">
         <div class="col-md-2"></div>
@@ -172,109 +163,100 @@
         <div class="col-md-2"></div>
       </div>
     </div>    
-          <div class="container about-container wow fadeInUp">
-              <div class="row">
-                  <div class="col-md-10"></div>
-                  <div class="col-md-2">
-                      <button type="button" class="btn btn-warning">EDIT</button>
-                      <button type="button" class="btn btn-success">SAVE</button>
-                  </div>
-              </div>           
+    <div class="container about-container wow fadeInUp">
+    <div class="container">
+    <form id="movieTable">
+    
+        <div class="row">
+        <br>
+        <center>
+            <div class="col-md-1"> </div>
+            <div class="col-md-4">
+                <label>Movie Title </label>
+                <input type="text" placeholder="title" id="title"> 
+            </div>
+            <div class="col-md-6">
+                <button type="button" class="btn btn-success" id="addMovie" >ADD MOVIE</button>
+                <button type="button" class="btn btn-info" id="editMovie" >EDIT MOVIE</button>
+                <button type="button" class="btn btn-danger" id="deleteMovie" >DELETE MOVIE</button>
+            </div>
+            <div class="col-md-1"></div>
+        </center>                      
+        </div>
+        <br>
+        <div class="row"> 
+                <div class ="col-md-4" align="left">
+                    <label>Genre</label>
+                    <input type="text" placeholder="ei. Drama" id="genre">  
+                    <br>
+                    <label>Cast</label>
+                    <input type="text" placeholder="seperate names with ';' " id="cast">
+                    <br>
+                    <label>Director</label>
+                    <input type="text" placeholder="seperate names with ';'" id="Director">
+                </div>   
+                <div class ="col-md-4" align="left">
+                    <label>Producer </label>
+                    <input type="text" placeholder="seperate name with ';'" id="producer"> 
+                    <br>
+                    <label>Description </label>
+                    <input type="text" placeholder="Description" id="description">  
+                    <br>
+                    <label>Trailer Picture </label>
+                    <input type="text" placeholder="paste url" id="trailerPicture">
+                </div>
+                <div class ="col-md-4" align="left"> 
+                    <label>Trailer Video</label>
+                    <input type="text" placeholder="paste url" id="trailerVideo"> 
+                    <br>
+                    <label>Rating </label>
+                    <input type="text" placeholder="MPAA_rating" id="rating">
+                    <br>
+                    <label>Status </label>
+                    <input type="text" placeholder="Status" id="status">
+                </div>
+            </div>
+    
+    </form>
+    </div>
+    <br> <br>
     <div class="row">
+    <center> <h3>Movies</h3>
           <div class="container">           
                 <table class="table">
                 <thead>
                     <tr>
-                        <th>Movie</th>
-                        <th>Room</th>
-                        <th>Viewing Dates</th>
-                        <th>Viewing Times</th>
+                        <th>Title</th>
+                        <th>Genre</th>
+                        <th>Cast</th>
+                        <th>Director</th>
+                        <th>Producer</th>
+                        <th>Description</th>
+                        <th>TrailerPicture</th>
+                        <th>TrailerVideo</th>
+                        <th>MPAA_rating</th>
+                        <th>Status</th>
+
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>Black Pather</td>
-                        <td>Screen 1</td>
-                        <th>02/14/2018 - 05/04/2018</th>
-                        <td>11:00am - 12:30pm <br>
-                            1:00pm - 2:30pm <br>
-                            3:00pm - 4:30pm <br>
-                            7:00pm - 8:30pm 
-                        </td>
+                    <tr>        
+                        <td>Title</td>
+                        <td>Genre</td>
+                        <td>Cast</td>
+                        <td>Director</td>
+                        <td>Producer</td>
+                        <td>Description</td>
+                        <td>TrailerPicture</td>
+                        <td>TrailerVideo</td>
+                        <td>MPAA_rating</td>
+                        <td>Status</td>
                     </tr>
-                    <tr>
-                        <td>Red Sparrow</td>
-                        <td>Screen 2</td>
-                        <th>03/14/2018 - 06/04/2018</th>
-                        <td>11:00am - 12:30pm <br>
-                            1:00pm - 2:30pm <br>
-                            3:00pm - 4:30pm <br>
-                            7:00pm - 8:30pm 
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Greatest Showman</td>
-                        <td>Screen 3</td>
-                        <th>12/01/2017 - 03/031/2018</th>
-                        <td>11:00am - 12:30pm <br>
-                            1:00pm - 2:30pm <br>
-                            3:00pm - 4:30pm <br>
-                            7:00pm - 8:30pm 
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Annihalationr</td>
-                        <td>Screen 4</td>
-                        <th>01/01/2018 - 04/24/2018</th>
-                        <td>11:00am - 12:30pm <br>
-                            1:00pm - 2:30pm <br>
-                            3:00pm - 4:30pm <br>
-                            7:00pm - 8:30pm 
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Death Wish</td>
-                        <td>Screen 1</td>
-                        <th>02/08/2018 - 06/01/2018</th>
-                        <td>9:00am - 10:30pm <br>
-                            5:00pm - 6:30pm <br>
-                            9:00pm - 10:30pm <br>
-                            11:00pm - 12:30pm 
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Game Night</td>
-                        <td>Screen 2</td>
-                        <th>03/18/2018 - 07/11/2018</th>
-                        <td>9:00am - 10:30pm <br>
-                            5:00pm - 6:30pm <br>
-                            9:00pm - 10:30pm <br>
-                            11:00pm - 12:30pm 
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Fifty Shades Freed</td>
-                        <td>Screen 3</td>
-                        <th>02/14/2018 - 06/14/2018</th>
-                        <td>9:00am - 10:30pm <br>
-                            5:00pm - 6:30pm <br>
-                            9:00pm - 10:30pm <br>
-                            11:00pm - 12:30pm 
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Greatest Showman</td>
-                        <td>Screen 4</td>
-                        <th>12/31/2018 - 04/01/2018</th>
-                        <td>9:00am - 10:30pm <br>
-                            5:00pm - 6:30pm <br>
-                            9:00pm - 10:30pm <br>
-                            11:00pm - 12:30pm 
-                        </td>
-                    </tr>
+                    
                     </tbody>
               </table>
           </div>
+          </center>
       </div>
     </div>
 
