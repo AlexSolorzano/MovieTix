@@ -466,7 +466,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 .section-description {
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 
 .section-title-divider {
@@ -474,18 +474,18 @@ body.mobile-nav-active #mobile-nav-toggle {
   height: 3px;
   background:#1faaef;
   margin: 0 auto;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 /* Get Started Section
 --------------------------------*/
 #movieInfo {
   background: #fff;
-  padding: 80px 0;
+  padding: 20px 0;
 }
 
 #movieInfo .about-container {
-  background: url(../img/blackPantherSmall.jpeg) left top no-repeat;
+  background: url(Resources/img/blackPantherSmall.jpeg) left top no-repeat;
 }
 
 #movieInfo .about-content {
