@@ -3,6 +3,8 @@ import java.util.*;
 public class VerificationCode 
 {
   private String code;
+  private boolean isVerified;
+  private int userID;
   
   public String getCode()
   {
@@ -26,6 +28,22 @@ public class VerificationCode
                   .length())));
       }
       return sb.toString();  
+  }
+  
+  public boolean getIsVerified() {
+    return isVerified; 
+  }
+  
+  public void setIsVerified(boolean isVerified) {
+    this.isVerified = isVerified; 
+  }
+  
+  public int getUserID() {
+    return userID; 
+  }
+  
+  public void setUserID(int userID) {
+     this.userID = userID;
   }
 
 }
