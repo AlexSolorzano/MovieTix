@@ -18,14 +18,11 @@ import java.util.Date;
 import java.sql.Time;
 
 public class Tickets {
+    private int id;
     private String movieTitle;
-    //private int confirmationNum;
-    //private int seatNum;
-    //private int ticketNum;
     private Date showDate; 
     private Time showTime;
-    //private double price;
-    //private boolean promotional;
+    private Seat seats;
 
     /*
      * Tickets()
@@ -39,11 +36,20 @@ public class Tickets {
         this.movieTitle = movieTitle;
     }
 
-    public Tickets(String movieTitle, int seatNum, Date showDate, Time showTime) {
+    public Tickets(int id, String movieTitle, Date showDate, Time showTime, Seat seats) {
+        this.id = id;
         this.movieTitle = movieTitle;
-        this.seatNum = seatNum;
         this.showDate = showDate;
         this.showTime = showTime;
+        this.seats = seats;
+    }
+    
+    public int getID() {
+        return id;   
+    }
+    
+    public void setID(int id) {
+        this.id = id;   
     }
 
     public String getMovieTitle() {
@@ -52,30 +58,6 @@ public class Tickets {
 
     public void setMovieTitle(String movieTitle) {
         this.movieTitle = movieTitle;
-    }
-
-    public int getConfirmationNum() {
-        return confirmationNum;
-    }
-
-    public void setConfirmationNum(int confirmationNum) {
-        this.confirmationNum = confirmationNum;
-    }
-
-    public int getSeatNum() {
-        return seatNum;
-    }
-
-    public void setSeatNum(int seatNum) {
-        this.seatNum = seatNum;
-    }
-
-    public int getTicketNum() {
-        return ticketNum;
-    }
-
-    public void setTicketNum(int ticketNum) {
-        this.ticketNum = ticketNum;
     }
 
     public Date getShowDate() {
@@ -93,20 +75,12 @@ public class Tickets {
     public void setShowTime(Time showTime) {
         this.showTime = showTime;
     }
-
-    public double getPrice() {
-        return price;
+    
+    public Seat getSeat() {
+        return seats;   
     }
-
-    public void setPrice(double price) {
-        this.price = price;
-    }
-
-    public boolean isPromotional() {
-        return promotional;
-    }
-
-    public void setPromotional(boolean promotional) {
-        this.promotional = promotional;
+    
+    public void setSeat(Seat seats) {
+        this.seats = seats; 
     }
 }
