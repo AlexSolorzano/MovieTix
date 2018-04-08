@@ -27,6 +27,7 @@ public class Employees {
     private int SSN; 
     private int authorization;
     private boolean suspended;
+    private int id;
 
     
     /*
@@ -134,6 +135,14 @@ public class Employees {
 
     public void setSuspended(boolean suspended) {
         this.suspended = suspended;
+    }
+    
+    public int getID() {
+        return id;   
+    }
+    
+    public void setID(int id) {
+        this.id = id;   
     }
     
 } // Employees 
