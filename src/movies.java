@@ -31,8 +31,12 @@ public class Movies {
     private String[] cast;
     private String[] producers;
     private String[] directors;
-    private Date[] showDates; 
-    private Time[] showTimes;
+    //private Date[] showDates; 
+    //private Time[] showTimes;
+    //ARE THE ABOVE NEEDED?
+    private String rating;
+    private String imagePath;
+    private String trailerPath;
     private Enum genre;
     private boolean nowPlaying;
 
@@ -136,5 +140,29 @@ public class Movies {
 
     public void setNowPlaying(boolean nowPlaying) {
         this.nowPlaying = nowPlaying;
+    }
+    
+    public String getRating() {
+        return rating;
+    }
+    
+    public void setRating(String rating) {
+        this.rating = rating;   
+    }
+    
+    public String getImagePath() {
+        return imagePath;   
+    }
+    
+    public void setImagePath(String imagePath) {
+        this.imagePath = imagePath;
+    }
+    
+    public String getTrailerPath() {
+        return trailerPath;   
+    }
+    
+    public void setTrailerPath(String trailerPath) {
+        this.trailerPath = trailerPath;   
     }
 }
