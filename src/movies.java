@@ -31,9 +31,8 @@ public class Movies {
     private String[] cast;
     private String[] producers;
     private String[] directors;
-    //private Date[] showDates; 
-    //private Time[] showTimes;
-    //ARE THE ABOVE NEEDED?
+    private Date[] showDates; 
+    private Time[] showTimes;
     private String rating;
     private String imagePath;
     private String trailerPath;
