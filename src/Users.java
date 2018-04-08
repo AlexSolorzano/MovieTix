@@ -26,7 +26,7 @@ public class Users {
     private int cardExp;
     private int cardZip;
     private int accountID;
-    private int authorization; 
+    private boolean isAdmin; 
     private boolean subscribed;
     private boolean suspended; 
     
@@ -169,12 +169,12 @@ public class Users {
         this.accountID = accountID;
     }
 
-    public int getAuthorization() {
-        return authorization;
+    public boolean getIsAdmin() {
+        return isAdmin;
     }
 
-    public void setAuthorization(int authorization) {
-        this.authorization = authorization;
+    public void setIsAdmin(boolean isAdmin) {
+        this.isAdmin = isAdmin;
     }
 
     public boolean isSubscribed() {
