@@ -19,13 +19,13 @@ import java.sql.Time;
 
 public class Tickets {
     private String movieTitle;
-    private int confirmationNum;
-    private int seatNum;
-    private int ticketNum;
+    //private int confirmationNum;
+    //private int seatNum;
+    //private int ticketNum;
     private Date showDate; 
     private Time showTime;
-    private double price;
-    private boolean promotional;
+    //private double price;
+    //private boolean promotional;
 
     /*
      * Tickets()
