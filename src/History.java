@@ -1,6 +1,6 @@
 public class History {
   
-  private User user;
+  private Users user;
   private Ticket ticket;
   private int uID;
   private int tID;
@@ -18,8 +18,8 @@ public class History {
   }
   
   public History(){
-    user = NULL;
-    ticket = NULL;
+    user = null;
+    ticket = null;
     uID = 0;
     tID = 0;
   }
@@ -28,7 +28,7 @@ public class History {
    return user; 
   }
   
-  public void setUser(User user){
+  public void setUser(Users user){
     this.user = user; 
   }
   
