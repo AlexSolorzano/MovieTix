@@ -5,7 +5,7 @@ public class History {
   private int uID;
   private int tID;
 
-  public History(User user, Ticket ticket){
+  public History(Users user, Ticket ticket){
     this.user = user;
     this.ticket = ticket;
     this.uID = user.getID();
