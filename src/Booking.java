@@ -1,23 +1,23 @@
-public class History {
+public class Booking {
   
   private Users user;
   private Ticket ticket;
   private int uID;
   private int tID;
 
-  public History(Users user, Ticket ticket){
+  public Booking(Users user, Ticket ticket){
     this.user = user;
     this.ticket = ticket;
     this.uID = user.getID();
     this.tID = ticket.getID();
   }
   
-  public History(int uID, int tID){
+  public Booking(int uID, int tID){
     this.uID = uID;
     this.tID = tID;
   }
   
-  public History(){
+  public Booking(){
     user = null;
     ticket = null;
     uID = 0;
