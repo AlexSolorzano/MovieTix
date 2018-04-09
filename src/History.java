@@ -8,8 +8,8 @@ public class History {
   public History(User user, Ticket ticket){
     this.user = user;
     this.ticket = ticket;
-    this.uID = user.getUserID();
-    this.tID = ticket.getTicketID();
+    this.uID = user.getID();
+    this.tID = ticket.getID();
   }
   
   public History(int uID, int tID){
