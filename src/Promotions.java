@@ -16,6 +16,7 @@ package MovieTheaterObjects;
 import java.util.Date;
 
 public class Promotions {
+    private int id;
     private String code; 
     private Date expiration;
     private double percentage;
@@ -25,10 +26,11 @@ public class Promotions {
      * -----------------------------
      * this is our Promotions constructor for creating new promotions
      */
-    public Promotions(String code, Date expiration, double percentage) {
+    public Promotions(String code, Date expiration, double percentage, int id) {
         this.code = code;
         this.expiration = expiration;
         this.percentage = percentage;
+        this.id = id;
     }
 
     public String getCode() {
@@ -53,5 +55,13 @@ public class Promotions {
 
     public void setPercentage(double percentage) {
         this.percentage = percentage;
+    }
+    
+    public int getID() {
+        return id;   
+    }
+    
+    public void setID(int id) {
+        this.id = id;   
     }
 }
