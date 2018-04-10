@@ -26,9 +26,10 @@ public class Users {
     private int cardExp;
     private int cardZip;
     private int accountID;
-    private int authorization; 
+    private boolean isAdmin; 
     private boolean subscribed;
-    private boolean suspended; 
+    private boolean suspended;
+    private int id;
     
     /*
      * Users(fname, lname, email, password)
@@ -38,12 +39,13 @@ public class Users {
      * 
      * registered users authentication: 1(registered)
      */
-    public Users(String fname, String lname, String email, String password) {
+    public Users(String fname, String lname, String email, String password, int id) {
         this.fname = fname; 
         this.lname = lname; 
         this.email = email; 
         this.password = password;
         this.authorization = 1;
+        this.id = id;
     }
 
         /*
@@ -70,7 +72,8 @@ public class Users {
        this.accountID = 0;
        this.authorization = 0;
        this.subscribed = false; 
-       this.suspended = false; 
+       this.suspended = false;
+       this.id = 0;
     }
     
     public String getFname() {
@@ -169,12 +172,12 @@ public class Users {
         this.accountID = accountID;
     }
 
-    public int getAuthorization() {
-        return authorization;
+    public boolean getIsAdmin() {
+        return isAdmin;
     }
 
-    public void setAuthorization(int authorization) {
-        this.authorization = authorization;
+    public void setIsAdmin(boolean isAdmin) {
+        this.isAdmin = isAdmin;
     }
 
     public boolean isSubscribed() {
@@ -192,4 +195,13 @@ public class Users {
     public void setSuspended(boolean suspended) {
         this.suspended = suspended;
     }
+    
+    public int getID(){
+        return id;   
+    }
+    
+    public void setID(int id){
+        this.id = id;   
+    }
+    
 } // Users
