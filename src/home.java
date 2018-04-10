@@ -16,6 +16,7 @@ public class home extends HttpServlet{
 		cfg = new Configuration(Configuration.VERSION_2_3_27);
 		cfg.setServletContextForTemplateLoading(getServletContext(), "WEB-INF/templates");
 		map =  new HashMap<>();
+        jdbcConnector.test();
 	}
 	
 	public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException
@@ -32,6 +33,8 @@ public class home extends HttpServlet{
 		    String firstName = request.getParameter("firstnameInput");
 		    String lastName = request.getParameter("lastnameInput");
 		    String password = request.getParameter("passwordInput");
+            
+            Controller.createUser(firstname,lastname,email,password);
 		    //Here I'm going to have an if statement to create a user and add to the database
 		    if ( email != null)//SIGN UP SECTION
 			{

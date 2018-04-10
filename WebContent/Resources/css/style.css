@@ -466,7 +466,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 .section-description {
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 60px;
 }
 
 .section-title-divider {
@@ -474,7 +474,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   height: 3px;
   background:#1faaef;
   margin: 0 auto;
-  margin-bottom: 10px;
+  margin-bottom: 30px;
 }
 
 /* Get Started Section
