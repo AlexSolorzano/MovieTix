@@ -20,14 +20,34 @@ public class accountConfirmation extends HttpServlet{
 	
 	public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException
 	{
+       System.out.println("Inside the doPost");
+        Controller c = new Controller();
 		PrintWriter out = response.getWriter();
 		response.setContentType("text/html");
 		
 		try 
-		{
-		        //map.put("person", "Marcus ");
-			//map.put(5, "hi");
-
+        {
+		    String vcode = request.getParameter("vcode");
+            String email = request.getParameter("email");
+            map.put("vMsg",false);
+            boolean verified=false;
+            
+            if (email != null && !email.equals("") && vcode != null &&!vcode.equals(""))
+            {
+                verified=c.checkVerification(vcode, email);
+            }  
+            else if(email != null && !email.equals(""))
+            {
+                System.out.println("Inside the right if ;/ ");
+                c.resendVerification(email);
+            }
+           
+            if(verified)
+            {
+                map.put("vMsg",true);
+            }
+            
+            
 			Template template = cfg.getTemplate("accountConfirmation.ftl");
 			template.process(map,out);
 		}
@@ -38,7 +58,7 @@ public class accountConfirmation extends HttpServlet{
 	}
 	public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException
 	{
-		doGet(request, response);
+       doGet(request,response); 
 	}
 
 }

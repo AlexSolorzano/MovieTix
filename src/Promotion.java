@@ -11,26 +11,23 @@
  * 
  * 
  */
-package MovieTheaterObjects;
 
 import java.util.Date;
 
-public class Promotions {
-    private int id;
+public class Promotion {
     private String code; 
-    private Date expiration;
-    private double percentage;
+    private String expiration;
+    private int percentage;
 
     /*
      * Promotions()
      * -----------------------------
      * this is our Promotions constructor for creating new promotions
      */
-    public Promotions(String code, Date expiration, double percentage, int id) {
+    public Promotion(String code, String expiration, int percentage) {
         this.code = code;
         this.expiration = expiration;
         this.percentage = percentage;
-        this.id = id;
     }
 
     public String getCode() {
@@ -41,27 +38,20 @@ public class Promotions {
         this.code = code;
     }
 
-    public Date getExpiration() {
+    public String getExpiration() {
         return expiration;
     }
 
-    public void setExpiration(Date expiration) {
+    public void setExpiration(String expiration) {
         this.expiration = expiration;
     }
 
-    public double getPercentage() {
+    public int getPercentage() {
         return percentage;
     }
 
-    public void setPercentage(double percentage) {
+    public void setPercentage(int percentage) {
         this.percentage = percentage;
     }
-    
-    public int getID() {
-        return id;   
-    }
-    
-    public void setID(int id) {
-        this.id = id;   
-    }
+   
 }

@@ -16,13 +16,14 @@ public class home extends HttpServlet{
 		cfg = new Configuration(Configuration.VERSION_2_3_27);
 		cfg.setServletContextForTemplateLoading(getServletContext(), "WEB-INF/templates");
 		map =  new HashMap<>();
-        jdbcConnector.test();
-	}
+    }
 	
 	public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException
 	{
 		PrintWriter out = response.getWriter();
 		response.setContentType("text/html");
+        map.put("vMsg",false);
+
 		
 		try 
 		{
@@ -33,22 +34,29 @@ public class home extends HttpServlet{
 		    String firstName = request.getParameter("firstnameInput");
 		    String lastName = request.getParameter("lastnameInput");
 		    String password = request.getParameter("passwordInput");
-            
-            Controller.createUser(firstname,lastname,email,password);
-		    //Here I'm going to have an if statement to create a user and add to the database
+    
 		    if ( email != null)//SIGN UP SECTION
-			{
-                System.out.println("finesse");
+            {
+                Controller c1 = new Controller();
+                User u = new User(firstName, lastName, email, password);
+                c1.createUser(u);
+                Verification v=c1.createVerification(u);
+                SendMail.sendVerification(email, v.getCode());
 			    response.sendRedirect("/MovieTix/accountConfirmation");
 			}
 		    else if (username != null)//SIGN IN SECTION
 			{
-			    response.sendRedirect("/MovieTix/profile");
+                Controller c1 = new Controller();
+			    User u = new User(username, passwordSignIn);
+                
+                if(c1.logIn(u))
+                    response.sendRedirect("/MovieTix/profile");
+                else
+                    map.put("vMsg",true);
+                    
 			}
 		    
 			map.put("person", "Marcus ");
-			//map.put(5, "hi");
-
 			Template template = cfg.getTemplate("index.ftl");
 			template.process(map,out);
 		}
@@ -59,6 +67,7 @@ public class home extends HttpServlet{
 	}
 	public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException
 	{
+        System.out.println("sup");
 		doGet(request, response);
 	}
 

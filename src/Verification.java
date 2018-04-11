@@ -1,20 +1,10 @@
 import java.util.*;
 
-public class VerificationCode 
+public class Verification
 {
   private String code;
-  private boolean isVerified;
-  private int userID;
-  
-  public String getCode()
-  {
-    return this.code;
-  }
-  
-  public void setCode(String code)
-  {
-    this.code=code;
-  }
+  private String isVerified;
+  private String email;
   
   public String generateCode()
   {
@@ -29,21 +19,30 @@ public class VerificationCode
       }
       return sb.toString();  
   }
+    public String getCode()
+  {
+    return this.code;
+  }
   
-  public boolean getIsVerified() {
+  public void setCode(String code)
+  {
+    this.code=code;
+  }
+  
+  public String getIsVerified() {
     return isVerified; 
   }
   
-  public void setIsVerified(boolean isVerified) {
+  public void setIsVerified(String isVerified) {
     this.isVerified = isVerified; 
   }
   
-  public int getUserID() {
-    return userID; 
+  public String getEmail() {
+    return email; 
   }
   
-  public void setUserID(int userID) {
-     this.userID = userID;
+  public void setUserID(String email) {
+     this.email = email;
   }
 
 }

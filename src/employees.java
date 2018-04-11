@@ -12,7 +12,6 @@
  * Potentially a memeber function for upgrading others employees (employees to managers)
  * 
  */
-package Users; 
 
 public class Employees {
     

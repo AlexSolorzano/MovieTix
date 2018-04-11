@@ -25,7 +25,8 @@ public class admin extends HttpServlet{
 		
 		try 
 		{
-		  
+		  Controller c1 = new Controller();
+            
             String title= request.getParameter("title");//add these to ftl 
 		    String genre = request.getParameter("genre");// add these to ftl   
 		    String cast = request.getParameter("cast");
@@ -33,12 +34,11 @@ public class admin extends HttpServlet{
 		    String director = request.getParameter("director");
 		    String synopsis = request.getParameter("synopsis");
             String imagePath= request.getParameter("imagePath");//add these to ftl 
-		    String trailerPath = request.getParameter("trailerPath");// add these to ftl
-		    
+		    String trailerPath = request.getParameter("trailerPath");// add these to ftl 
 		    String rating = request.getParameter("rating");
             int   nowPlaying = Integer.getInteger(request.getParameter("nowPlaying"));
 		  
-            Controller.createMovie(title, genre, cast, producer, director, synopsis, imagePath, trailerPath, rating, nowPlaying);
+            c1.createMovie(title, genre, cast, producer, director, synopsis, imagePath, trailerPath, rating, nowPlaying);
             
 
 			Template template = cfg.getTemplate("admin.ftl");
