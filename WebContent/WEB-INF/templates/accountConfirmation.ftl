@@ -40,12 +40,18 @@
                         
                     <div class="panel-body"><center><h4>Thank you for creating an account on MovieTix. <br> Please check your email for a verification code. <br> Enter your code below.</h4><br>
                         <form> 
-                        <input type="text" placeholder="Verification Code">
-                        <button type="submit" class="btn btn-primary">SUBMIT</button> 
+                        <input type="text" placeholder="Email" name="email">
+                        <input type="text" placeholder="Verification Code" name="vcode">
+                        <button type="submit" class="btn btn-success">SUBMIT</button>
+                        <button type="submit" class="btn btn-danger">Resend Code</button>
                         </form>
                         <br>
                         <br>
-                        <button type="submit" class="btn btn-danger">Resend Code</button>
+                        <#if vMsg>
+                            <p>You've successfully verified your account. You may now go home or check out your profile to modify/add any information.</p> 
+                        </#if>    
+                        
+                       <a href="/MovieTix/home"> <button type="button" class="btn btn-primary"> HOME</button></a> 
                         </center></div>
                 </div>
                 </div>

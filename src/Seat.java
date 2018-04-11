@@ -1,4 +1,3 @@
-package MovieTheaterObjects;
 
 public class Seat {
   
@@ -7,11 +6,7 @@ public class Seat {
   
   public Seat(int row, int col){
     this.row = row;
-    this.col = col
-  }
-  
-  public Seat() {
-    Seat(0,0);
+    this.col = col;
   }
   
   public int getRow() {

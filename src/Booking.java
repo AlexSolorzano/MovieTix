@@ -1,59 +1,27 @@
 public class Booking {
   
-  private Users user;
-  private Ticket ticket;
-  private int uID;
-  private int tID;
+  private int userID;
+  private String ticketID;
 
-  public Booking(Users user, Ticket ticket){
-    this.user = user;
-    this.ticket = ticket;
-    this.uID = user.getID();
-    this.tID = ticket.getID();
-  }
-  
-  public Booking(int uID, int tID){
-    this.uID = uID;
-    this.tID = tID;
-  }
-  
-  public Booking(){
-    user = null;
-    ticket = null;
-    uID = 0;
-    tID = 0;
+  public Booking(int userID, String ticketID){
+    this.userID = userID;
+    this.ticketID = ticketID;
   }
 
-  public User getUser(){
-   return user; 
-  }
-  
-  public void setUser(Users user){
-    this.user = user; 
-  }
-  
-  public Ticket getTicket(){
-    return ticket; 
-  }
-  
-  public void setTicket(Ticket ticket){
-   this.ticket = ticket; 
-  }
-  
   public int getUserID(){
-   return uID; 
+   return userID; 
   }
   
   public void setUserID(int uID){
-   this.uID = uID; 
+   this.userID = uID; 
   }
   
-  public int getTicketID(){
-   return tID; 
+  public String getTicketID(){
+   return ticketID; 
   }
   
-  public void setTicketID(int tID){
-    this.tID = tID;
+  public void setTicketID(String tID){
+    this.ticketID = tID;
   }
 
 }

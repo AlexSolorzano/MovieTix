@@ -63,9 +63,11 @@
         <ul class="nav-menu">
           <li class="menu-active"><a href="#hero"></a></li>
             <li><a href="/MovieTix/home">Home </a></li>
-          <li><a href="#movieListing">Users</a></li> 
-            <li><a href="#upcomingMovies">Company Performance</a></li>
+          <li><a href="#movieListing">Manage Users</a></li> 
+            <li><a href="#upcomingMovies">Manage Employees</a></li>
             <li><a href="#about">Manage Movies</a></li>
+            <li><a href="#testimonials">Manage Tickets</a></li>
+
 
 
         </ul>
@@ -75,22 +77,19 @@
   </header>
   <!-- #header -->
 
-  <!--==========================
-  About Section
-  ============================-->
   <section id="movieListing">
     <div class="container wow fadeInUp">
       <div class="row">
         <div class="col-md-12">
-          <h3 class="section-title">Users</h3>
+          <h3 class="section-title">Manage Users</h3>
           <div class="section-title-divider"></div>
         </div>
       </div>
     </div>
     <div class="container about-container wow fadeInUp">
          <div class="row">
-                  <div class="col-md-10"></div>
-                  <div class="col-md-2">
+                  <div class="col-md-8"></div>
+                  <div class="col-md-4">
                       <button type="button" class="btn btn-warning">DELETE</button>
                       <button type="button" class="btn btn-success">ADD</button>
                   </div>
@@ -112,7 +111,8 @@
                         <td>18292</td>
                         <td>Michael </td>
                         <td>Scott</td>
-                        <td>mscott@dunderMif.com</td>                    </tr>
+                        <td>mscott@dunderMif.com</td>                    
+                    </tr>
                     <tr>
                         <td>91282</td>
                         <td>Dwight K.</td>
@@ -136,23 +136,39 @@
     <div class="container wow fadeInUp">
       <div class="row">
         <div class="col-md-12">
-          <h3 class="section-title">Company Performance</h3>
+          <h3 class="section-title">Manage Employees</h3>
           <div class="section-title-divider"></div>
         </div>
           <div class="container">
               <div class="row">
-                  <div class="col-md-2"></div>
-                <div class="col-md-8">  
-                  <img src="Resources/img/moneyGraph.gif">
-                  </div>
-                <div class="col-md-2"></div>
-
-              </div> 
+       
+          <div class="container">           
+                <table class="table" id="employees">
+                <thead>
+                    <tr>
+                        <th>User ID</th>
+                        <th>Firstname</th>
+                        <th>Lastname</th>
+                        <th>Email</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>18292</td>
+                        <td>Michael </td>
+                        <td>Scott</td>
+                        <td>mscott@dunderMif.com</td>   
+                    </tr>
+                    </tbody>
+              </table>
+          </div>
+      </div>
           </div>
       </div>
     </div>
     </section>
-    <section id="movieListing">
+    <section id="about">
+    <br><br>
     <div class="container wow fadeInUp">
       <div class="row">
         <div class="col-md-2"></div>
@@ -164,17 +180,18 @@
       </div>
     </div>    
     <div class="container about-container wow fadeInUp">
+    <br>
     <div class="container">
     <form id="movieTable">
     
         <div class="row">
         <br>
-        <center>
             <div class="col-md-1"> </div>
-            <div class="col-md-4">
+            <div class="col-md-4" align="left">
                 <label>Movie Title </label>
-                <input type="text" placeholder="title" id="title"> 
+                <input type="text" placeholder="title" id="title" name="title"> 
             </div>
+        <center>
             <div class="col-md-6">
                 <button type="button" class="btn btn-success" id="addMovie" >ADD MOVIE</button>
                 <button type="button" class="btn btn-info" id="editMovie" >EDIT MOVIE</button>
@@ -183,37 +200,37 @@
             <div class="col-md-1"></div>
         </center>                      
         </div>
-        <br>
+        <br>  <br>
         <div class="row"> 
                 <div class ="col-md-4" align="left">
-                    <label>Genre</label>
-                    <input type="text" placeholder="ei. Drama" id="genre">  
-                    <br>
-                    <label>Cast</label>
-                    <input type="text" placeholder="seperate names with ';' " id="cast">
-                    <br>
-                    <label>Director</label>
-                    <input type="text" placeholder="seperate names with ';'" id="Director">
-                </div>   
+                    <label>Genre</label><br>
+                    <input type="text" placeholder="ei. Drama" id="genre" name="genre">  
+                    <br><br>
+                    <label>Cast</label> <br>
+                    <input type="text" placeholder="seperate names with ';' " id="cast" name="cast">
+                    <br><br>
+                    <label>Director</label><br>
+                    <input type="text" placeholder="seperate names with ';'" id="Director" name="Director">
+                </div>
                 <div class ="col-md-4" align="left">
-                    <label>Producer </label>
-                    <input type="text" placeholder="seperate name with ';'" id="producer"> 
-                    <br>
-                    <label>Description </label>
-                    <input type="text" placeholder="Description" id="description">  
-                    <br>
-                    <label>Trailer Picture </label>
-                    <input type="text" placeholder="paste url" id="trailerPicture">
+                    <label>Producer </label><br>
+                    <input type="text" placeholder="seperate name with ';'" id="producer" name="producer"> 
+                    <br><br>
+                    <label>Description </label><br>
+                    <input type="text" placeholder="synopsis" id="synopsis" name="synopsis">  
+                    <br><br>
+                    <label>Trailer Picture </label><br>
+                    <input type="text" placeholder="paste url" id="picturePath" name="picturePath">
                 </div>
                 <div class ="col-md-4" align="left"> 
-                    <label>Trailer Video</label>
-                    <input type="text" placeholder="paste url" id="trailerVideo"> 
-                    <br>
-                    <label>Rating </label>
-                    <input type="text" placeholder="MPAA_rating" id="rating">
-                    <br>
-                    <label>Status </label>
-                    <input type="text" placeholder="Status" id="status">
+                    <label>Trailer Video</label><br>
+                    <input type="text" placeholder="paste url" id="trailerPath" name="trailerPath"> 
+                    <br><br>
+                    <label>Rating </label><br>
+                    <input type="text" placeholder="MPAA_rating" id="rating" name="rating">
+                    <br><br>
+                    <label>Status </label><br>
+                    <input type="text" placeholder="Status" id="status" name="nowPlaying">
                 </div>
             </div>
     
@@ -259,7 +276,7 @@
           </center>
       </div>
     </div>
-
+    <br><br>
   </section>
 
 

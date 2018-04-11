@@ -54,17 +54,16 @@ $(document).ready(function()
             var username = $("#username").val();
             var psswd = $("#password").val();
             
-           if( username=="")
+           if(!username)
                 {
                     event.preventDefault();
                      $("#message1").html("Please fill out all indicated fields!");
                 }
-            else if( psswd=="")
+            else if(!psswd)
                 {
                     event.preventDefault();
                      $("#message1").html("Please fill out all indicated fields!");
                 }
-            
             else{
                     $("#loginform").submit();
 
