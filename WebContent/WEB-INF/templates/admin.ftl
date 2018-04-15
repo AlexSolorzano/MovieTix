@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>MoviePage</title>
+  <title>Admin Page</title>
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <meta content="" name="keywords">
   <meta content="" name="description">
@@ -62,7 +62,7 @@
 <nav id="nav-menu-container">
         <ul class="nav-menu">
           <li class="menu-active"><a href="#hero"></a></li>
-            <li><a href="/MovieTix/home">Home </a></li>
+            <li><a href="/MovieTix/home">Log out </a></li>
           <li><a href="#movieListing">Manage Users</a></li> 
             <li><a href="#upcomingMovies">Manage Employees</a></li>
             <li><a href="#about">Manage Movies</a></li>
@@ -136,7 +136,7 @@
     <div class="container wow fadeInUp">
       <div class="row">
         <div class="col-md-12">
-          <h3 class="section-title">Manage Employees</h3>
+          <h3 class="section-title">Manage Ticket Prices and Promotions</h3>
           <div class="section-title-divider"></div>
         </div>
           <div class="container">
@@ -167,6 +167,7 @@
       </div>
     </div>
     </section>
+
     <section id="about">
     <br><br>
     <div class="container wow fadeInUp">

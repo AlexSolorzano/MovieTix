@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Confirmation Page</title>
+<title>Subscribed</title>
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
 <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
@@ -36,19 +36,17 @@
             <div class="col md-5">
                  <div class="panel-group">
                     <div class="panel panel-default">
-                    <div class="panel-heading"><center><h3>Account Confirmation</h3></center> </div>
+                    <div class="panel-heading"><center><h3>Subscribed Confirmation Confirmation</h3></center> </div>
                         
-                    <div class="panel-body"><center><h4>Thank you for creating an account on MovieTix. <br> Please check your email for a verification code. <br> Enter your code below.</h4><br>
+                    <div class="panel-body"><center><h4>Thank you for wanting to subscribe. <br> Enter your email below to be added to the list. <br> Note, you must be a registered user. </h4><br>
                         <form> 
                         <input type="text" placeholder="Email" name="email">
-                        <input type="text" placeholder="Verification Code" name="vcode">
                         <button type="submit" class="btn btn-success">SUBMIT</button>
-                        <button type="submit" class="btn btn-danger">Resend Code</button>
                         </form>
                         <br>
                         <br>
                         <#if vMsg>
-                            <p>You've successfully verified your account. You may now go home and log in to view your profile to modify/add any information.</p> 
+                            <p> You're not registered as user, please register and then comeback. <br>Thank you!</p> 
                         </#if>    
                         
                        <a href="/MovieTix/home"> <button type="button" class="btn btn-primary"> HOME</button></a> 

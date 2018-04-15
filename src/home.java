@@ -10,6 +10,7 @@ import java.sql.*;
 public class home extends HttpServlet{
 	Configuration cfg;
 	HashMap map;
+    String welcomeName = "";
 	
 	public void init()
 	{
@@ -23,10 +24,12 @@ public class home extends HttpServlet{
 		PrintWriter out = response.getWriter();
 		response.setContentType("text/html");
         map.put("vMsg",false);
-
-		
+        map.put("eMsg",false);
+       // map.put("loggedIn",false);
 		try 
 		{
+            Controller c1 = new Controller();
+
 		    String username= request.getParameter("username");//add these to ftl 
 		    String passwordSignIn = request.getParameter("password");// add these to ftl
 		    
@@ -34,29 +37,52 @@ public class home extends HttpServlet{
 		    String firstName = request.getParameter("firstnameInput");
 		    String lastName = request.getParameter("lastnameInput");
 		    String password = request.getParameter("passwordInput");
-    
-		    if ( email != null)//SIGN UP SECTION
+            if(!c1.duplicateEmail(email))
             {
-                Controller c1 = new Controller();
-                User u = new User(firstName, lastName, email, password);
-                c1.createUser(u);
-                Verification v=c1.createVerification(u);
-                SendMail.sendVerification(email, v.getCode());
-			    response.sendRedirect("/MovieTix/accountConfirmation");
-			}
-		    else if (username != null)//SIGN IN SECTION
+                if ( email != null)//SIGN UP SECTION
+                {
+                    User u = new User(firstName, lastName, email, password);
+                    c1.createUser(u);
+                    Verification v=c1.createVerification(u);
+                    SendMail.sendVerification(email, v.getCode());
+                    response.sendRedirect("/MovieTix/accountConfirmation");                }
+                else if (username != null)//SIGN IN SECTION
+                {
+                    User u = new User(username, passwordSignIn);
+                    if(c1.logIn(u))
+                    {
+						HttpSession session = request.getSession(); //Access the session
+
+						int aLevel=c1.getAuthorization(u.getUserID());
+                    	if(aLevel==0)
+                    	{
+							welcomeName=u.getUserID();
+							//map.put("loggedIn",true);
+							session.setAttribute("user", welcomeName);//Store an attribute named user with value
+
+						}else if(aLevel==1)//They're a manager
+							response.sendRedirect("/MovieTix/manager");
+						else if(aLevel==2)//They're admin
+							response.sendRedirect("/MovieTix/admin");
+						else//regular user
+							response.sendRedirect("/MovieTix/profile");
+
+					}
+                    else
+                        map.put("vMsg",true);
+
+                }
+            }
+            else
+                map.put("eMsg",true);
+        
+
+            if(Profile.loggedOut)
 			{
-                Controller c1 = new Controller();
-			    User u = new User(username, passwordSignIn);
-                
-                if(c1.logIn(u))
-                    response.sendRedirect("/MovieTix/profile");
-                else
-                    map.put("vMsg",true);
-                    
+				welcomeName="";
+				map.put("loggedIn",false);
 			}
-		    
-			map.put("person", "Marcus ");
+            map.put("user",welcomeName);
 			Template template = cfg.getTemplate("index.ftl");
 			template.process(map,out);
 		}

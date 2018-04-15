@@ -16,10 +16,6 @@
 import java.util.Date;
 import java.sql.Time;
 
-enum Genres {
-    // This is where our list of genres will go 
-}
-
 public class Movie {
     // need to find out how to add a JPEG for movie cover 
     // need to find out how to add a MP4 for a movie trailer 

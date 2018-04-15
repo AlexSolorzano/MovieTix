@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Confirmation Page</title>
+<title>Password Retrieval</title>
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
 <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-    <style src=../Resources/css/style.css type="text/css"></style>
+    <style src="Resources/css/style.css type="text/css"></style>
 <!------ Include the above in your HEAD tag ---------->
 </head>
 
@@ -21,7 +21,7 @@
         margin: auto;
     }
     .container {
-  background: linear-gradient(rgba(255, 255, 255, .0), rgba(255, 255, 255, 0.9)), url("../Resources/img/popcorn.jpg");
+  background: linear-gradient(rgba(255, 255, 255, .0), rgba(255, 255, 255, 0.9)), url("Resources/img/popcorn.jpg");
   padding: 150px 50px 100px 50px;
 }
 </style>
@@ -36,10 +36,20 @@
             <div class="col md-5">
                  <div class="panel-group">
                     <div class="panel panel-default">
-                    <div class="panel-heading"><center><h1>Purchase Confirmation</h1></center> </div>
+                    <div class="panel-heading"><center><h3>Password Retrieval</h3></center> </div>
                         
-                    <div class="panel-body"><center><h3>Thank you for shopping with us today! We appreciate you picking MovieTix as your movie ticket provider. Please check your email for a receipt of your order.</h3><br>
-                       <a href="../templates/index.ftl"><h4>Go Back Home</h4></a> 
+                    <div class="panel-body"><center><h4> Please type the email associated with your account. <br> We will email you your password. </h4><br>
+                        <form> 
+                        <input type="text" placeholder="Email" name="email">
+                        <button type="submit" class="btn btn-success">SUBMIT</button>
+                        </form>
+                        <br>
+                        <br>
+                        <#if vMsg>
+                            <p> There is no account associated with this email. Please try again.</p> 
+                        </#if>    
+                        
+                       <a href="/MovieTix/home"> <button type="button" class="btn btn-primary"> HOME</button></a> 
                         </center></div>
                 </div>
                 </div>

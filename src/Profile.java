@@ -8,9 +8,16 @@ import java.sql.*;
 
 @WebServlet("/profile")
 public class Profile extends HttpServlet{
+    public static String currentUser="";
+    public static boolean loggedOut=false;
 	Configuration cfg;
 	HashMap map;
-	
+    Controller c = new Controller();
+	public static void giveUser(String username)
+    {
+        currentUser=username;
+    }
+
 	public void init()
 	{
 		cfg = new Configuration(Configuration.VERSION_2_3_27);
@@ -20,16 +27,61 @@ public class Profile extends HttpServlet{
 	
 	public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException
 	{
+	    loggedOut=false;
+        
 		PrintWriter out = response.getWriter();
 		response.setContentType("text/html");
-		
+        map.put("sub",false);
 		try 
 		{
-			//map.put("person", 38);
-			//map.put(5, "hi");
+            
+            HttpSession session = request.getSession(); //Access the session
+			String username= (String) session.getAttribute("user"); //get a attribute from the session
+            
+            
+            //CHANGING USER INFO
+            String new_address = request.getParameter("new_address");
+            if(new_address != null)
+            {
+                System.out.println("PROFILE-this is address: "+new_address);
+                c.changeAddress(username, new_address);
+            }
+            String new_password = request.getParameter("new_password");
+            if(new_password !=null)
+            {
+                c.changePassword(username,new_password);
+            }
+            
+            //LOGGING OUT
+            String logout = request.getParameter("logout");
+            if(logout != null && logout.equals("true"))
+            {
+                session.setAttribute("user"," ");
+                session.invalidate();
+                loggedOut=true;
+                response.sendRedirect("/MovieTix/home");
+            }
+            
+            //DISPLAYING USER INFO
+            String name = c.getName(username);
+            map.put("name",name);
+            
+            String address = c.getAddress(username);
+            map.put("address",address);
+            
+            String email = c.getEmail(username);
+            map.put("email",email);
+            
+            boolean showSubscribed = c.isSubsribed(username);
+            if(showSubscribed)
+            {
+                map.put("sub",true);
+            }
 
 			Template template = cfg.getTemplate("profile.ftl");
 			template.process(map,out);
+            String s =request.getParameter("logout");
+            
 		}
 		catch(Exception e)
 		{

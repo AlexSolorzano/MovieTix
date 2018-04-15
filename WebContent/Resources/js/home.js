@@ -73,3 +73,37 @@ $(document).ready(function()
         ); 
     }
     );
+
+//PROFILE EDIT SECTION
+$(document).ready(function()
+    {                
+        $("#submitInfoChange").click(function(event)
+        {
+            var pssd = $("#new_password").val();
+            var pssdCon= $("#password_confirmation").val();
+            
+           
+            if(pssd=="" && pssdCon != "")
+                {
+                    event.preventDefault();
+                    $("#message").html("Please fill out both 'password' and 'password confirmation' ");
+                }
+            else if(pssdCon=="" && pssd != "")
+                {
+                    event.preventDefault();
+                    $("#message").html("Please fill out both 'password' and 'password confirmation' ");
+                }
+            else if(pssdCon!==pssd)
+                {
+                    event.preventDefault();
+                    $("#message").html("Passwords don't match. Please try again.");
+                }
+            else{
+                    $("#submitInfoChange").submit();
+
+            }
+                
+        }
+        ); 
+    }
+    );

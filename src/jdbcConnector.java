@@ -23,15 +23,17 @@ public class jdbcConnector
 
     //USER: SIGN UP
     public void addVerification(Verification v, User u)
+        //creates verification  code pertaining to user
     {
         
-        String  query = "insert into verification values(?, ?, ?)";
+        String  query = "INSERT INTO verification values(?, ?, ?, ?)";
         PreparedStatement ps = null;
       try{
         ps = con.prepareStatement(query);
-        ps.setString(1, v.getCode());
-        ps.setString(2, v.getIsVerified());
-        ps.setString(3, u.getEmail());
+        ps.setString(1, u.getUserID());
+        ps.setString(2, v.getCode());
+        ps.setString(3, v.getIsVerified());
+        ps.setString(4, u.getEmail());
         ps.execute(); 
       }catch(Exception e)
         {
@@ -41,7 +43,7 @@ public class jdbcConnector
     
     public void addUser(User u)
     {
-        String  query = "insert into users values(?, ?, ?, ?, ?, ?, ?, ?, ?)";
+        String  query = "INSERT INTO USERS values(?, ?, ?, ?, ?, ?, ?, ?, ?)";
         PreparedStatement ps = null;
       try{
         ps = con.prepareStatement(query);
@@ -64,8 +66,9 @@ public class jdbcConnector
     }
      
     public boolean checkVerification(String code, String email)
+    //checking if code pertains to user
     {
-        String query = "select * from verification where email=? and code=?";
+        String query = "SELECT * FROM verification WHERE email=? and code=?";
         PreparedStatement ps = null;
         try{
             ps = con.prepareStatement(query);
@@ -87,8 +90,9 @@ public class jdbcConnector
     }
     
      public void verified(String email)
+    //the user is changed to verified
     {
-        String query = "UPDATE verification set verified =? where email =?";
+        String query = "UPDATE verification SET verified =? WHERE email =?";
         PreparedStatement ps = null;
         try{
             ps = con.prepareStatement(query);
@@ -102,8 +106,9 @@ public class jdbcConnector
         }
     }
     public void resendVerification(String email)
+    //Resends the verification code
     {
-        String query = "SELECT code from verification where email=?";
+        String query = "SELECT code FROM verification WHERE email=?";
         PreparedStatement ps = null;
         try{
             ps = con.prepareStatement(query);
@@ -120,13 +125,39 @@ public class jdbcConnector
     
 
     //USER: LOG-IN
-    public boolean checkUser(User u)
+    public boolean isVerified(String username)
+    //got be verified in order to log in
     {
+        String hasVerified="";
+        String query = "SELECT * FROM verification where userID=?";
+        PreparedStatement ps = null;
+        try{
+            ps = con.prepareStatement(query);
+            ps.setString(1,username);
+            ResultSet rs = ps.executeQuery();
+            while(rs.next())
+            {
+                hasVerified = rs.getString("verified");
+            }
+            return(hasVerified.equalsIgnoreCase("true"));
+            
+        }catch(Exception e)
+        {
+            e.printStackTrace();
+        }
+        return false;
+    }
+    
+    public boolean checkUser(User u)
+    //Did the user type in the right credentials to login
+    {
+        boolean canLogin=isVerified(u.getUserID());
+        if(!canLogin)
+            return false;
         String query = "SELECT * FROM users WHERE userID=? and password=?";
         PreparedStatement ps = null;
         try
-        {
-            
+        {  
             ps=con.prepareStatement(query);
             ps.setString(1, u.getUserID());
             ps.setString(2, u.getPassword());
@@ -140,6 +171,198 @@ public class jdbcConnector
         return false;
     }
   
+    public boolean resetPassword(String email)
+    {
+        String query = "SELECT * FROM users WHERE email=?";
+        PreparedStatement ps = null;
+        try{
+                ps = con.prepareStatement(query);
+                ps.setString(1,email);
+                ResultSet rs = ps.executeQuery();
+                if(rs.next())
+                {
+                    String password=rs.getString("password");
+                    SendMail.sendPassword(email,password);
+                    return true;
+                }
+        }catch(Exception e)
+        {
+            e.printStackTrace();
+        }
+        return false;
+    }
+    public boolean duplicateEmail(String email)
+    {
+        String query = "SELECT * FROM users WHERE email=?";
+        PreparedStatement ps = null;
+        try{
+            ps = con.prepareStatement(query);
+            ps.setString(1,email);
+            ResultSet rs = ps.executeQuery();
+            return(rs.next());
+        }catch(Exception e)
+        {
+            e.printStackTrace();
+        }
+        return false;
+    }
+    
+    public String getName(String username)
+    {
+        String s="";
+        String s2="";
+        String name=" ";
+        String query = "SELECT * FROM users WHERE userID=?";
+        PreparedStatement ps = null;
+        try{
+            ps=con.prepareStatement(query);
+            ps.setString(1,username);
+            ResultSet rs = ps.executeQuery();
+            while(rs.next())
+            {
+                s=rs.getString("firstname");
+                s2=rs.getString("lastname");
+            }
+           name=s+" "+s2;
+        }catch(Exception e)
+        {
+            e.printStackTrace();
+        }
+        return name;
+    }
+    
+    public String getAddress(String username)
+    {
+        String address="";
+        String query = "SELECT * FROM users WHERE userID=?";
+        PreparedStatement ps = null;
+        try{
+            ps=con.prepareStatement(query);
+            ps.setString(1,username);
+            ResultSet rs = ps.executeQuery();
+            while(rs.next())
+            {
+                address=rs.getString("address");
+            }
+        
+        }catch(Exception e)
+        {
+            e.printStackTrace();
+        }
+        return address;
+    }
+    
+    public String getEmail(String username)
+    {
+       String email="";
+        String query = "SELECT * FROM users WHERE userID=?";
+        PreparedStatement ps = null;
+        try{
+            ps=con.prepareStatement(query);
+            ps.setString(1,username);
+            ResultSet rs = ps.executeQuery();
+            while(rs.next())
+            {
+                email=rs.getString("email");
+            }
+            System.out.println(email);
+        
+        }catch(Exception e)
+        {
+            e.printStackTrace();
+        }
+        return email; 
+    }
+    
+    public void subscribeUser(String email)
+    {
+        String query= "UPDATE users SET subscribed =? WHERE email =?";
+        PreparedStatement ps = null;
+        try{
+            ps=con.prepareStatement(query);
+            ps.setString(1,"true");
+            ps.setString(2,email);
+            ps.execute();
+        }catch(Exception e)
+        {
+            e.printStackTrace();           
+        }
+    }
+    
+     public void changeAddress(String username,String new_address)
+     {
+         System.out.println("JDBC- this is address: "+new_address);
+         String query="UPDATE users SET address=?  WHERE userID=?";
+         PreparedStatement ps = null;
+         try{
+             ps=con.prepareStatement(query);
+             ps.setString(1,new_address);
+             ps.setString(2,username);
+             ps.execute();
+         }catch(Exception e)
+         {
+             e.printStackTrace();
+         }
+     }
+    public void changePassword(String username,String new_password)
+     {
+        String query="UPDATE users SET password=? WHERE userID=?";
+         PreparedStatement ps = null;
+         try{
+             ps=con.prepareStatement(query);
+             ps.setString(1, new_password);
+             ps.setString(2, username);
+             ps.execute();
+         }catch(Exception e)
+         {
+             e.printStackTrace();
+         }
+     }
+    public boolean isSubscribed(String username)
+    {
+        String query="SELECT * FROM users WHERE userID=?";
+        String subscribed="";
+        PreparedStatement ps = null;
+        try{
+            ps = con.prepareStatement(query);
+            ps.setString(1, username);
+            ResultSet rs = ps.executeQuery();
+            while(rs.next()) {
+                subscribed = rs.getString("subscribed");
+            }
+            return(subscribed.equals("true"));
+        }
+        catch(Exception e)
+        {
+            e.printStackTrace();
+        }
+        return false;   
+    }
+    public int getAuthorization(String username)
+    {
+        String query = "SELECT * FROM users where userID=?";
+        int a=-1;
+        PreparedStatement ps = null;
+        try{
+            ps = con.prepareStatement(query);
+            ps.setString(1,username);
+            ResultSet rs = ps.executeQuery();
+            while(rs.next()){
+                a=rs.getInt("authorization");
+            }
+            return a;
+        }catch (Exception e)
+        {
+            e.printStackTrace();
+        }
+        return a;
+    }
+    
+    
+    
+    
+    
+    
     
     
     

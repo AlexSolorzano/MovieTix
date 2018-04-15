@@ -25,22 +25,26 @@ public class admin extends HttpServlet{
 		
 		try 
 		{
-		  Controller c1 = new Controller();
-            
-            String title= request.getParameter("title");//add these to ftl 
-		    String genre = request.getParameter("genre");// add these to ftl   
-		    String cast = request.getParameter("cast");
-		    String producer = request.getParameter("producer");
-		    String director = request.getParameter("director");
-		    String synopsis = request.getParameter("synopsis");
-            String imagePath= request.getParameter("imagePath");//add these to ftl 
-		    String trailerPath = request.getParameter("trailerPath");// add these to ftl 
-		    String rating = request.getParameter("rating");
-            int   nowPlaying = Integer.getInteger(request.getParameter("nowPlaying"));
-		  
-            c1.createMovie(title, genre, cast, producer, director, synopsis, imagePath, trailerPath, rating, nowPlaying);
-            
+			int nowPlaying = -1;
+			Controller c1 = new Controller();
+			String title = request.getParameter("title");//add these to ftl
 
+			if(title!=null) {
+				String genre = request.getParameter("genre");// add these to ftl
+				String cast = request.getParameter("cast");
+				String producer = request.getParameter("producer");
+				String director = request.getParameter("director");
+				String synopsis = request.getParameter("synopsis");
+				String imagePath = request.getParameter("imagePath");//add these to ftl
+				String trailerPath = request.getParameter("trailerPath");// add these to ftl
+				String rating = request.getParameter("rating");
+				String np = request.getParameter("nowPlaying");
+				if (np != null && !np.equals("")) {
+					nowPlaying = Character.getNumericValue(np.charAt(0));
+				}
+				c1.createMovie(title, genre, cast, producer, director, synopsis, imagePath, trailerPath, rating, nowPlaying);
+
+			}
 			Template template = cfg.getTemplate("admin.ftl");
 			template.process(map,out);
 		}
