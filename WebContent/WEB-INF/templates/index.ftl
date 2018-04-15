@@ -67,9 +67,9 @@
         </div>
 
         <h1>Movie Tix</h1>
-        <h2>Welcome  ${person}<span class="rotating"> to the ultimate movie booking experience</span></h2>
+        <h2>Welcome ${user} <span class="rotating"> to the ultimate movie booking experience</span></h2>
         <div class="actions">
-          <a href="#about" class="btn-get-started">Get Started</a>
+          <a href="#about" class="btn-get-started">Get started</a>
           <a href="#signIn" class="btn-signIn">Sign in</a>
         </div>
       </div>
@@ -92,12 +92,15 @@
         <ul class="nav-menu">
           <li class="menu-active"><a href="#hero">Home</a></li>
           <li><a href="#about">About Us</a></li>
-        <li class="menu-has-children"><a href="#signIn">${person}</a>
+         <!--FREE MARKER IF LOGGED IN-->
+        <li class="menu-has-children"><a href="#signIn">${user}</a>
             <ul>
               <li><a href="/MovieTix/profile">My Account</a></li>
             </ul>
           </li>
-          <li><a href="#movieListing">Movie Listings</a></li>
+         !
+
+            <li><a href="#movieListing">Movie Listings</a></li>
           <li><a href="#upcomingMovies">Upcoming Movies</a>
           <li><a href="#subscribe">Subscribe</a></li>
             
@@ -141,7 +144,7 @@
             <div class="panel panel-info" >
                     <div class="panel-heading">
                         <div class="panel-title">Sign In</div>
-                        <div style="float:right; font-size: 80%; position: relative; top:-10px"><a href="#">Forgot password?</a></div>
+                        <div style="float:right; font-size: 80%; position: relative; top:-10px"><a href="/MovieTix/forgotPassword">Forgot password?</a></div>
                     </div>     
 
                     <div style="padding-top:30px" class="panel-body" >
@@ -163,9 +166,8 @@
                                     <div class="col-sm-12 controls">
                                       <button id="submitSignIn" class="btn btn-success">Sign In  </button>
                                        <#if vMsg>
-                                            <p>Incorrect login information. Try agan</p> 
-                                        </#if>  
-                                        
+                                            <h5>Incorrect login information or you haven't verified your account. <br> Check email for a verification code. </h5> 
+                                        </#if>          
                                         <h5 id="message1"></h5>
 
                                     </div>
@@ -237,6 +239,9 @@
                                 <center>
                                     <button id="submitSignUp" type="submit" class="btn btn-success">Sign Up</button>
                                     <br>
+                                    <#if eMsg>
+                                            <h5>An account with that email already exist. Go to login or use a different email. </h5> 
+                                        </#if>  
                                     <h5 id="message"></h5>
                                  </center>
                                 
@@ -310,16 +315,16 @@
         <br>
         <div id="myDIV">
             <div class="row">
-                <div class="col-md-2>
-                <div class="filterDiv fantasy scienceFiction">
+            <div class="col-md-2">
+                <div class="filterDiv thriller mystery">
                     <a class="portfolio-item" style="background-image: url(Resources/img/blackPanther.jpg);" href="/MovieTix/moviePage">
                         <div class="details">
-                            <h4>Black Panther</h4>
-                                <span>February 16th</span>
-                                    <br>
-                                        Fantasy/Science fiction<br>
-                                        Rated: PG-13
-                                    </div>
+                        <h4>Black Panther</h4>
+                            <span>February 16th</span>
+                                <br>
+                                   Fantasy/Science fiction<br>
+                                     Rated: PG-13
+                        </div>
                     </a>
                 </div>
                 </div>
@@ -537,7 +542,7 @@
           <p class="subscribe-text">Join our 1000+ subscribers and get access to the latest news and movie promotions!</p>
         </div>
         <div class="col-md-4 subscribe-btn-container">
-          <a class="subscribe-btn" href="#">Subscribe Now</a>
+          <a class="subscribe-btn" href="/MovieTix/subscribed">Subscribe Now</a>
         </div>
       </div>
     </div>

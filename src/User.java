@@ -24,6 +24,10 @@ public class User {
     private String suspended;
     private String userID;
     
+    public User()
+    {
+        
+    }
    //SIGN UP
     public User(String fname, String lname, String email, String password) {
         this.firstname = fname; 

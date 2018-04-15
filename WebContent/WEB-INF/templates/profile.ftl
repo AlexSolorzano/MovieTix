@@ -7,6 +7,7 @@
 <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 <!------ Include the above in your HEAD tag ---------->
 </head>
+<script src="Resources/js/home.js"></script>
 <script>
 
          $(document).ready(function()
@@ -53,8 +54,8 @@
                     <li class="active"><a href="" data-target-id="profile"><i class="glyphicon glyphicon-user"></i> Profile</a></li>
                     <li><a href="" data-target-id="change-password"><i class="glyphicon glyphicon-lock"></i> Edit Profile</a></li>
                     <li><a href="" data-target-id="settings"><i class="glyphicon glyphicon-cog"></i> Settings</a></li>
-                    <li><a href="" data-target-id="logout"><i class="glyphicon glyphicon-log-out"></i> Logout</a></li>
-                    <li><a href="" data-target-id="logout2" ><i class="glyphicon glyphicon-log-out"></i> Go Home </a></li>
+                    <li><a href="" data-target-id="home"><i class="glyphicon glyphicon-log-out"></i>Go Home</a></li>
+                    <li><a href="" data-target-id="logout2"><i class="glyphicon glyphicon-log-out"></i>Logout</a></li>
                 </ul>
             </div>
             </div>
@@ -65,7 +66,7 @@
                         <h3 class="panel-title">Name</h3>
                     </div>
                     <div class="panel-body">
-                        Ridha Ali   
+                        ${name}   
                     </div>
                 </div>
                 <div class="panel panel-info" style="margin: 1em;">
@@ -73,15 +74,7 @@
                         <h3 class="panel-title">Email</h3>
                     </div>
                     <div class="panel-body">
-                        ridhaC00lG!rl@gmail.com
-                    </div>
-                </div>
-                <div class="panel panel-info" style="margin: 1em;">
-                    <div class="panel-heading">
-                        <h3 class="panel-title">Phone Number</h3>
-                    </div>
-                    <div class="panel-body">
-                        404-128-2901
+                         ${email}
                     </div>
                 </div>
                 <div class="panel panel-info" style="margin: 1em;">
@@ -89,17 +82,7 @@
                         <h3 class="panel-title">Address</h3>
                     </div>
                     <div class="panel-body">
-                        Go Dawgs Ave Apt #1 <br>
-                        Athens, Ga 30605
-                    </div>
-                </div>
-                 <div class="panel panel-info" style="margin: 1em;">
-                    <div class="panel-heading">
-                        <h3 class="panel-title">Last Password Change</h3>
-
-                    </div>
-                    <div class="panel-body">
-                        4 days Ago
+                        ${address}
                     </div>
                 </div>
                 <div class="panel panel-info" style="margin: 1em;">
@@ -111,7 +94,7 @@
                         <div class="row">
                     <div class="col-md-9"></div>
                             <div class="col-md-2">
-                      <button type="button" class="btn btn-warning">REFUND TICKET</button>
+                      <button class="btn btn-warning">REFUND TICKET</button>
                   </div>
               </div>
                         <br>
@@ -138,65 +121,36 @@
 
             </div>
             
-   <div class="col-md-9  admin-content" id="settings">
+             <div class="col-md-9  admin-content" id="settings">
                 <div class="panel panel-info" style="margin: 1em;">
                     <div class="panel-heading">
-                        <h3 class="panel-title">Notification</h3>
+                        <h3 class="panel-title">Promotion</h3>
                     </div>
                     <div class="panel-body">
-                        <div class="label label-success">allowed</div>
-                    </div>
-                </div>
-                <div class="panel panel-info" style="margin: 1em;">
-                    <div class="panel-heading">
-                        <h3 class="panel-title">Newsletter</h3>
-                    </div>
-                    <div class="panel-body">
-                        <div class="badge">Monthly</div>
-                    </div>
-                </div>
-                <div class="panel panel-info" style="margin: 1em;">
-                    <div class="panel-heading">
-                        <h3 class="panel-title">Admin</h3>
-
-                    </div>
-                    <div class="panel-body">
-                        <a href="/MovieTix/admin" class="label label-success"> <span >  Access Admin Tools  </span></a>
+                        <#if sub>
+                             <div class="label label-success">subscribed</div> 
+                        <#else>
+                             <div class="label label-danger">not subscribed</div>
+                        </#if>   
                     </div>
                 </div>
 
             </div>
-            <div class="col-md-9  admin-content" id="settings">
+            <div class="col-md-9  admin-content" id="home">
                 <div class="panel panel-info" style="margin: 1em;">
                     <div class="panel-heading">
-                        <h3 class="panel-title"></h3>
+                        <h3 class="panel-title">Go home</h3>
                     </div>
                     <div class="panel-body">
-                        <div class="label label-success">allowed</div>
+                        <a href="/MovieTix/home"><button class="btn btn-info" type="button">Go Home </button></a>
+                        </a>
                     </div>
-                </div>
-                <div class="panel panel-info" style="margin: 1em;">
-                    <div class="panel-heading">
-                        <h3 class="panel-title">Newsletter</h3>
-                    </div>
-                    <div class="panel-body">
-                        <div class="badge">Monthly</div>
-                    </div>
-                </div>
-                <div class="panel panel-info" style="margin: 1em;">
-                    <div class="panel-heading">
-                        <h3 class="panel-title">Admin</h3>
 
-                    </div>
-                    <div class="panel-body">
-                        <a href="/MovieTix/admin" class="label label-success"> <span >  Access Admin Tools  </span></a>
-                    </div>
                 </div>
-
             </div>
 
             <div class="col-md-9  admin-content" id="change-password">
-                <form action="/password" method="post">
+                <form id="changeInfo" name="changeInfo">
 
            
                     <div class="panel panel-info" style="margin: 1em;">
@@ -206,7 +160,7 @@
                         <div class="panel-body">
                             <div class="form-group">
                                 <div class="col-sm-10">
-                                    <input type="password" class="form-control" name="password" id="new_password" >
+                                    <input type="password" class="form-control" name="new_password" id="new_password" >
                                 </div>
                             </div>
 
@@ -222,7 +176,7 @@
                         <div class="panel-body">
                             <div class="form-group">
                                 <div class="col-sm-10">
-                                    <input type="password" class="form-control" name="password_confirmation" id="confirm_password" >
+                                    <input type="password" class="form-control" name="password_confirmation" id="password_confirmation" >
                                 </div>
                             </div>
                         </div>
@@ -235,33 +189,20 @@
                         <div class="panel-body">
                             <div class="form-group">
                                 <div class="col-sm-10">
-                                    <input type="address" class="form-control" name="new_address" id="confirm_password" >
+                                    <input type="text" class="form-control" name="new_address" id="new_address" >
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="panel panel-info" style="margin: 1em;">
-                        
-                        <div class="panel-heading">
-                            <h3 class="panel-title"><label for="new_number" class="control-label panel-title">New Number </label></h3>
-                        </div>
-                        <div class="panel-body">
-                            <div class="form-group">
-                                <div class="col-sm-10">
-                                    <input type="number" class="form-control" name="new_phone" id="new_number" >
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                     
-
+                    </div>     
            
                     <div class="panel panel-info border" style="margin: 1em;">
                         <div class="panel-body">
                             <div class="form-group">
                                 <div class="pull-left">
-                                    <input type="submit" class="form-control btn btn-primary" name="submit" id="submit">
+                                    <button class="btn btn-info" name="submitInfoChange" id="submitInfoChange">SUBMIT </button>
                                 </div>
+                                <br> <br>
+                                <h5 id="message"></h5>
                             </div>
                         </div>
                     </div>
@@ -270,44 +211,24 @@
             </div>
 
             <div class="col-md-9  admin-content" id="settings"></div>
-
-            <div class="col-md-9  admin-content" id="logout">
-                <div class="panel panel-info" style="margin: 1em;">
-                    <div class="panel-heading">
-                        <h3 class="panel-title">Confirm Logout</h3>
-                    </div>
-                    <div class="panel-body">
-                        Do you really want to logout ?  
-                        <a  href="/MovieTix/home" class="label label-danger" >
-                        <!--onclick="event.preventDefault();document.getElementById('logout-form').submit()-->
-                            
-                            <span >   Yes   </span>
-                        </a>    
-                        <a href="/MovieTix/admin" class="label label-success"> <span >  No   </span></a>
-                    </div>
-                    <form id="logout-form" action="#" method="POST" style="display: none;">
-                    </form>
-
-                </div>
-            </div>
+            
+            <form id="logout">
             <div class="col-md-9  admin-content" id="logout2">
                 <div class="panel panel-info" style="margin: 1em;">
                     <div class="panel-heading">
-                        <h3 class="panel-title">Leave Profile</h3>
+                        <h3 class="panel-title">Log out</h3>
                     </div>
                     <div class="panel-body">
-                       Are you sure you want to go home?  
-                        <a  href="/MovieTix/home" class="label label-danger">
-                            <span >  Yes </span>
+                       Are you sure you want to go home?  <br> <br>
+                        <button class="btn btn-info" type="submit" name="logout" id="logout" value="true">LOG OUT</button>
                         </a>
-                        <a  href="/MovieTix/profile" class="label label-success">
-                            <span> No </span>
-                        </a>
-                      </div>
+                    </div>
 
                 </div>
             </div>
+            </form>
         </div>
+
     </div>
     </body>
     </html>

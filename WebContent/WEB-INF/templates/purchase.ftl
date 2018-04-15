@@ -364,7 +364,6 @@
 						</tr>
 						<tr>
 							<td>
-                                <!--<a href="moviePage.html" class="btn btn-warning"><i class="fa fa-angle-left"></i> Continue Shopping</a>-->
                             </td>
 							<td colspan="2" class="hidden-xs"></td>
 							<td class="hidden-xs text-center"><strong>Total: $13.98</strong></td>
