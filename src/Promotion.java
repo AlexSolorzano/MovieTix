@@ -13,30 +13,42 @@
  */
 
 import java.util.Date;
+import java.util.Random;
 
-public class Promotion {
+public class Promotion
+{
     private String code; 
     private String expiration;
     private int percentage;
 
-    /*
-     * Promotions()
-     * -----------------------------
-     * this is our Promotions constructor for creating new promotions
-     */
-    public Promotion(String code, String expiration, int percentage) {
-        this.code = code;
+
+    public String generateCode()
+    {
+        String candidateChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
+        int length = 5;
+        StringBuilder sb = new StringBuilder();
+        Random random = new Random();
+        for (int i = 0; i < length; i++)
+        {
+            sb.append(candidateChars.charAt(random.nextInt(candidateChars
+                    .length())));
+        }
+        return sb.toString();
+    }
+    public Promotion(){};
+    public Promotion( String expiration, int percentage) {
+        this.code = generateCode();
         this.expiration = expiration;
         this.percentage = percentage;
     }
 
     public String getCode() {
-        return code;
+        return this.code;
+    }
+    public void setCode(String code){
+        this.code=code;
     }
 
-    public void setCode(String code) {
-        this.code = code;
-    }
 
     public String getExpiration() {
         return expiration;

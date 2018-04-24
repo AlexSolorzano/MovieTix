@@ -136,8 +136,82 @@
   
 <!--==========================
   Upcoming movies Section
-  ============================--> 
-    
+  ============================-->
+  <section id="movieListings">
+      <div class="container wow fadeInUp">
+          <div class="row">
+              <div class="col-md-12">
+                  <br>
+                  <h3 class="section-title">Order Summary</h3>
+                  <div class="section-title-divider"></div>
+              </div>
+          </div>
+      </div>
+      <div class="container about-container wow fadeInUp">
+          <div class="container">
+              <form id="payment-form">
+              <div class="row">
+                  <div class=" col-md-push-5 about-content">
+                      <table id="cart" class="table table-hover table-condensed">
+
+                          <thead>
+                          <tr>
+                              <th style="width:50%">Movie</th>
+                              <th style="width:22%" class="text-center">Seat</th>
+                              <th style="width:10%">Price</th>
+                              <th style="width:10%"></th>
+                          </tr>
+                          </thead>
+                          <tbody>
+                          <tr>
+                              <td data-th="Product">
+                                  <div class="row">
+                                      <div class="col-sm-10">
+                                          <h4 class="nomargin">${title}</h4>
+                                          <p>ADULT TICKET</p>
+                                      </div>
+                                  </div>
+                              </td>
+                              <td data-th="Price">${row},${col}</td>
+                              <td data-th="Price">$${adultPrice}</td>
+                              <td class="actions" data-th="">
+                                      <input type="number" min="0" max="1" name="addTicketA"  id="addTicketA"/>
+                              </td>
+                          </tr>
+                          <tr>
+                              <td data-th="Product">
+                                  <div class="row">
+                                      <div class="col-sm-10">
+                                          <h4 class="nomargin">${title}</h4>
+                                          <p>CHILD TICKET</p>
+                                      </div>
+                                  </div>
+                              </td>
+                              <td data-th="Price">${row},${col}</td>
+                              <td data-th="Price">$${childPrice}</td>
+                              <td class="actions" data-th="">
+                                      <input type="number" min="0" max="1" name="addTicketC"  id="addTicketC"/>
+                              </td>
+                          </tr>
+                          </tbody>
+                          <tfoot>
+                          <tr>
+                              <td colspan="2" class="hidden-xs"></td>
+                              <td class="hidden-xs text-center">Booking Fee: $${bookingFee} <strong>Subtotal:$${total}</strong></td>
+                              <td></td>
+                          </tr>
+                          </tfoot>
+
+                      </table>
+                      <a href="/MovieTix/home"><button class="btn btn-warning">CANCEL ORDER</button><br></a>
+
+                      <br>
+                      <br>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
     
     <section id="upcomingMovies">
     <div class="container wow fadeInUp">
@@ -158,18 +232,18 @@
                 <div class="display-td"></div>
                 </div>
                 <div class="panel-body">
-                <form>
+                <form id="billingInfo">
                 <div class="row">
                     <div class="col-xs-6">
                       <div class="form-group">
                             <label for="couponCode">First Name</label>
-                             <input type="text" class="form-control" name="couponCode" placeholder="Ex. John"/>
+                             <input type="text" class="form-control" name="" placeholder="Ex. John"/>
                       </div>       
                  </div>
                  <div class="col-xs-6">
                       <div class="form-group">
                             <label for="couponCode">Last Name</label>
-                             <input type="text" class="form-control" name="couponCode" placeholder="Ex. Doe"/>
+                             <input type="text" class="form-control" name="" placeholder="Ex. Doe"/>
                       </div>       
                  </div>   
                 </div>
@@ -177,7 +251,7 @@
                     <div class="col-xs-12">
                         <div class="form-group">
                             <label for="couponCode">Address</label>
-                                <input type="text" class="form-control" name="couponCode" placeholder="Ex. 123 Baxter St"/>
+                                <input type="text" class="form-control" name="" placeholder="Ex. 123 Baxter St"/>
                       </div>       
                  </div>      
                 </div>
@@ -185,26 +259,16 @@
                 <div class="col-xs-6">
                         <div class="form-group">
                             <label for="couponCode">City</label>
-                                <input type="text" class="form-control" name="couponCode" placeholder="Ex. Athens"/>
+                                <input type="text" class="form-control" name="" placeholder="Ex. Athens"/>
                         </div>       
                  </div>
                  <div class="col-xs-6">
                     <div class="form-group">
                         <label for="couponCode">Zipcode</label>
-                        <input type="text" class="form-control" name="couponCode" placeholder="Ex. 30605"/>
+                        <input type="text" class="form-control" name="" placeholder="Ex. 30605"/>
                         </div>       
                  </div>  
                 </div>
-                    <div class="row">
-                    <div class="col-xs-12">
-                        <div class="form-group">
-                            <label for="couponCode">Email</label>
-                                <input type="text" class="form-control" name="couponCode" placeholder="Ex.johnDoe@email.com"/>
-                      </div>       
-                 </div>      
-                </div>
-                </form>
-                
                 </div>
               
         </div>
@@ -223,7 +287,6 @@
                                      
                 </div>
                 <div class="panel-body">
-                    <form role="form" id="payment-form" method="POST" action="javascript:void(0);">
                         <div class="row">
                             <div class="col-xs-12">
                                 <div class="form-group">
@@ -287,100 +350,20 @@
                                 <p class="payment-errors"></p>
                             </div>
                         </div>
+                    <button type="submit" value="true" class="btn btn-info" name="savePayment">Save payment</button>
+                    <#if msg >
+                        <h5>You're coupon code doesn't exist or already expired.</h5>
+                    </#if>
                     </form>
                 </div>
-            </div>                 
-            </div>  
+            </div>
+            </div>
+            <h3><b>Total: $${total}</b></h3>
         </div> 
     </div>
   </section>
-    <section id="movieListings">
-    <div class="container wow fadeInUp">
-      <div class="row">
-        <div class="col-md-12">
-            <br>
-          <h3 class="section-title">Order Summary</h3>
-          <div class="section-title-divider"></div>
-        </div>
-      </div>
-    </div>
-    <div class="container about-container wow fadeInUp">
-        <div class="container"> 
-      <div class="row">
-        <div class=" col-md-push-5 about-content">
-	       <table id="cart" class="table table-hover table-condensed">
-    				<thead>
-						<tr>
-							<th style="width:50%">Movie</th>
-							<th style="width:10%">Price</th>
-							<th style="width:8%">Quantity</th>
-							<th style="width:22%" class="text-center">Subtotal</th>
-							<th style="width:10%"></th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td data-th="Product">
-								<div class="row">
-									<div class="col-sm-10">
-										<h4 class="nomargin">Black Panther</h4>
-										<p>ADULT TICKET</p>
-									</div>
-								</div>
-							</td>
-							<td data-th="Price">$7.99</td>
-							<td data-th="Quantity">
-								<input type="number" class="form-control text-center" value="1">
-							</td>
-							<td data-th="Subtotal" class="text-center">7.99</td>
-							<td class="actions" data-th="">
-								<button class="btn btn-info btn-sm"><i class="fa fa-refresh"></i></button>
-								<button class="btn btn-danger btn-sm"><i class="fa fa-trash-o"></i></button>								
-							</td>
-						</tr>
-                        <tr>
-							<td data-th="Product">
-								<div class="row">
-									<div class="col-sm-10">
-										<h4 class="nomargin">Black Panther</h4>
-										<p>CHILD TICKET</p>
-									</div>
-								</div>
-							</td>
-							<td data-th="Price">$5.99</td>
-							<td data-th="Quantity">
-								<input type="number" class="form-control text-center" value="1">
-							</td>
-							<td data-th="Subtotal" class="text-center">5.99</td>
-							<td class="actions" data-th="">
-								<button class="btn btn-info btn-sm"><i class="fa fa-refresh"></i></button>
-								<button class="btn btn-danger btn-sm"><i class="fa fa-trash-o"></i></button>								
-							</td>
-						</tr>
-					</tbody>
-					<tfoot>
-						<tr class="visible-xs">
-							<td class="text-center"><strong>Total 1.99</strong></td>
-						</tr>
-						<tr>
-							<td>
-                            </td>
-							<td colspan="2" class="hidden-xs"></td>
-							<td class="hidden-xs text-center"><strong>Total: $13.98</strong></td>
-							<td></td>
-						</tr>
-					</tfoot>
 
-				</table>
-                <a href="/MovieTix/home"><button class="btn btn-warning">CANCEL ORDER</button><br></a>
 
-            <br>
-            <br>
-            </div>
-        </div>
-        </div>
-    </div>
-  </section>
     <!--==========================
   Purchase Section
   ============================-->
@@ -392,8 +375,9 @@
           <p class="subscribe-text"> Be sure to review your order at the top before hitting this button</p>
         </div>
         <div class="col-md-4 subscribe-btn-container">
-          <a class="subscribe-btn" href="/MovieTix/purchaseConfirmation">SUBMIT PAYMENT</a>
-            
+            <form id="submitAll">
+            <button type="submit" class="btn btn-primary" name="submitOrder" value="true" id="submitOrder">SUBMIT PAYMENT</button>
+            </form>
         </div>
       </div>
     </div>
@@ -430,5 +414,6 @@
 
   <!-- Template Specisifc Custom Javascript File -->
   <script src="Resources/js/custom.js"></script>
+  <script src="Resources/js/home.js"></script>
 </body>
 </html>

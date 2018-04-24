@@ -1,3 +1,4 @@
+import java.sql.Array;
 import java.util.*;
 import java.sql.Time;
 public class Controller{
@@ -78,7 +79,6 @@ public class Controller{
     
     public void changeAddress(String username,String new_address)
     {
-        System.out.println("CONTROLLER- this is address: "+new_address);
          c.changeAddress(username, new_address);
     }
    
@@ -90,46 +90,168 @@ public class Controller{
     public int getAuthorization(String username){
        return(c.getAuthorization(username));
     }
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    public  void createMovie(String title, String genre, String cast, String producer, String director, String synopsis, String imagePath, String trailerPath, String rating, int nowPlaying)
+
+    public ArrayList<User> usersList()
     {
-       Movie m = new Movie(title, genre, cast, producer, director, synopsis, imagePath, trailerPath, rating, nowPlaying);
-    
-        c.addMovie(m);    
-        
+        return(c.usersList());
     }
-    public void createPromotion(String code, String expiration, int percentage)
+
+    public boolean suspendUser(String email, String suspended)
     {
-        Promotion p = new Promotion(code, expiration,percentage);
+        return(c.suspendUser(email, suspended));
+    }
+
+    public boolean updateAuth(String email, int level)
+    {
+        return (c.updateAuth(email, level));
+    }
+
+    public boolean deleteUser(String email)
+    {
+        return(c.deleteUser(email));
+    }
+
+
+
+
+    public  void addMovie(Movie m)
+    {
+        c.addMovie(m);
+    }
+
+
+    public boolean editMovie(String title, String column, String newInfo)
+    {
+        return(c.editMovie(title, column, newInfo));
+    }
+
+    public boolean deleteMovie(String title)
+    {
+        return(c.deleteMovie(title));
+    }
+
+    public ArrayList<Movie> movieList()
+    {
+        return (c.movieList());
+    }
+
+
+
+    public Movie getMovieInfo(String title)
+    {
+        return(c.getMovieInfo(title));
+    }
+
+
+
+    public int getShowtimeID(Showtime_obj s)
+    {
+        return c.getShowtimeID(s);
+    }
+
+
+
+    public boolean addShowtime(Showtime_obj s)
+    {
+        return(c.addShowTime(s));
+    }
+
+    public boolean deleteShowtime(Showtime_obj s)
+    {
+        return(c.deleteShowtime(s));
+    }
+
+
+
+    public ArrayList<Showtime_obj> showtimeList(String title)
+    {
+        return(c.showtimeList(title));
+    }
+
+
+    public void updatePricing(String column, int newPrice)
+    {
+        c.updatePrice(column,newPrice);
+    }
+
+    public int getPrice(String column)
+    {
+        return(c.getPrice(column));
+    }
+
+    public double getSubTotal(){
+        return (c.getSubTotal());
+    }
+    public void setSubTotal(Double x)
+    {
+        c.setSubTotal(x);
+    }
+
+    public ArrayList<Booking> getBookingList(String username)
+    {
+        return c.getBookingList(username);
+    }
+    public ArrayList<Booking> getBookingList()
+    {
+        return c.getBookingList();
+    }
+    public void addPromotion(Promotion p)
+    {
         c.addPromotion(p);
     }
-    
-    public void createBooking(int userID, String ticketID)
+
+    public void createSeating(int showtimeID)
     {
-        Booking b = new Booking(userID, ticketID);
+        c.createSeating(showtimeID);
+    }
+
+
+    public boolean refundedTicket(int id)
+    {
+        return(c.refundedTicket(id));
+    }
+
+
+    public ArrayList<Seat> getRow(int showtimeID, int row){
+        return (c.getRow(showtimeID,row));
+    }
+
+
+    public boolean checkCoupon(String code){
+        return(c.checkCoupon(code));
+    }
+    public Promotion getCoupon(String code){
+        return (c.getCoupon(code));
+    }
+
+
+    public void createBooking(String username, int ticketID, String title, int row, int col, String date,String time)
+    {
+        Booking b = new Booking(username,ticketID,title, row, col, date, time);
         c.addBooking(b);
     }
     
-    public void createTicket(int userID, String title, String showDate, String showTime, int row, int col)
+    public void createTicket(Ticket t)
     {
-        Ticket t = new Ticket(userID, title, showDate, showTime, row, col);
         c.addTicket(t);
     }
-    
-    //do I have to transfer all of my connector classes in here?
+   public Showtime_obj getShowtimeValues(int showtimeID){
+        return(c.getShowtimeValues(showtimeID));
+   }
+
+   public void createPaymentInfo(PaymentInfo p, String username)
+   {
+       c.createPaymentInfo(p, username);
+   }
+
+
+    public int getTicketID(Ticket t)
+    {
+        return(c.getTicketID(t));
+    }
+    public void updateSeats(int showtimeID, int row, int col)
+    {
+        c.updateSeats(showtimeID, row, col);
+    }
 
 }

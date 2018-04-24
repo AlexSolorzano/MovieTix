@@ -32,6 +32,7 @@ public class Profile extends HttpServlet{
 		PrintWriter out = response.getWriter();
 		response.setContentType("text/html");
         map.put("sub",false);
+        map.put("msg2",false);
 		try 
 		{
             
@@ -61,6 +62,17 @@ public class Profile extends HttpServlet{
                 loggedOut=true;
                 response.sendRedirect("/MovieTix/home");
             }
+
+            String refundButton=request.getParameter("refundButton");
+            if(refundButton!=null && refundButton.equals("true"))
+            {
+                String ticketID=request.getParameter("ticketID");
+                int id = Integer.parseInt(ticketID);
+                if(c.refundedTicket(id))
+                {
+                    map.put("msg2",true);
+                }
+            }
             
             //DISPLAYING USER INFO
             String name = c.getName(username);
@@ -77,6 +89,9 @@ public class Profile extends HttpServlet{
             {
                 map.put("sub",true);
             }
+
+            ArrayList<Booking> list = c.getBookingList(username);
+            map.put("bookings",list);
 
 			Template template = cfg.getTemplate("profile.ftl");
 			template.process(map,out);

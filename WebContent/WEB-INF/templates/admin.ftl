@@ -64,7 +64,7 @@
           <li class="menu-active"><a href="#hero"></a></li>
             <li><a href="/MovieTix/home">Log out </a></li>
           <li><a href="#movieListing">Manage Users</a></li> 
-            <li><a href="#upcomingMovies">Manage Employees</a></li>
+            <li><a href="#upcomingMovies">Manage Tickets</a></li>
             <li><a href="#about">Manage Movies</a></li>
             <li><a href="#testimonials">Manage Tickets</a></li>
 
@@ -88,15 +88,44 @@
     </div>
     <div class="container about-container wow fadeInUp">
          <div class="row">
-                  <div class="col-md-8"></div>
-                  <div class="col-md-4">
-                      <button type="button" class="btn btn-warning">DELETE</button>
-                      <button type="button" class="btn btn-success">ADD</button>
-                  </div>
-              </div>    
+                <div class="col-md-4">
+                    <form id="disableUser">
+                        <h4><u>Suspend User</u></h4>
+                        <label>Email</label>
+                        <input type="text" placeholder="email" id="email" name="email"> <br>
+                        <button type="submit"  value="true" id="disable" name="disable" class="btn btn-danger">DISABLE</button>
+                        <button type="submit"  value="true" id="enable" name="enable" class="btn btn-success">ENABLE</button>
+                        <h5 id="message"></h5>
+                        <#if noUser> <h5>This User doesn't exist. </h5 </#if>
+                    </form>
+                </div>
+             <div class="col-md-4">
+                 <form id="changeAuth">
+                        <h4><u>Change Authorization</u></h4>
+                        <label>Email</label>
+                        <input type="text" placeholder="email" id="email" name="email"><br>
+                        <label>Authorization</label>
+                        <input type="text" placeholder="level" id="authorization" name="authorization">
+                 <button type="submit" name="addAuth" id="addAuth"   value="true" class="btn btn-success">SUBMIT</button>
+                 <h5 id="message"></h5>
+                 <#if noUser> <h5>This User doesn't exist. </h5 </#if>
+                 </form>
+             </div>
+             <div class="col-md-4">
+                 <form id="removeUser">
+                     <h4><u>Delete User</u></h4>
+                    <label>Email</label>
+                    <input type="text" placeholder="email" id="email" name="email">
+                     <button type="submit"  name="deleteUser" id="deleteUser" value="true" class="btn btn-danger">DELETE</button>
+                     <h5 id="message"></h5>
+                     <#if noUser> <h5>This User doesn't exist. </h5 </#if>
+                 </form>
+             </div>
+         </div>
       <div class="row">
-       
-          <div class="container">           
+       <br> <br>
+          <div class="container">
+              <center><h3><u>Users</u></h3></center>
                 <table class="table">
                 <thead>
                     <tr>
@@ -104,27 +133,25 @@
                         <th>Firstname</th>
                         <th>Lastname</th>
                         <th>Email</th>
+                        <th>Address</th>
+                        <th>Suspended</th>
+                        <th>Authorization</th>
+                        <th>Subscribed</th>
                     </tr>
                 </thead>
                 <tbody>
+                <#list users as user>
                     <tr>
-                        <td>18292</td>
-                        <td>Michael </td>
-                        <td>Scott</td>
-                        <td>mscott@dunderMif.com</td>                    
+                        <td>${user.getUserID()}</td>
+                        <td>${user.getFirstname()}</td>
+                        <td>${user.getLastname()}</td>
+                        <td>${user.getEmail()}</td>
+                        <td>${user.getAddress()}</td>
+                        <td>${user.getSuspended()}</td>
+                        <td>${user.getAuthorization()}</td>
+                        <td>${user.getSubscribed()}</td>
                     </tr>
-                    <tr>
-                        <td>91282</td>
-                        <td>Dwight K.</td>
-                        <td>Schrute</td>
-                        <td>dkschrute@dunderMif.com</td>
-                    </tr>
-                    <tr>
-                        <td>19283</td>
-                        <td>Jim</td>
-                        <td>Halpert</td>
-                        <td>jhalpert@dunderMif.com</td>
-                    </tr>
+                </#list>
                     </tbody>
               </table>
           </div>
@@ -136,33 +163,75 @@
     <div class="container wow fadeInUp">
       <div class="row">
         <div class="col-md-12">
-          <h3 class="section-title">Manage Ticket Prices and Promotions</h3>
+          <h3 class="section-title">Manage Tickets & Promotions</h3>
           <div class="section-title-divider"></div>
         </div>
           <div class="container">
               <div class="row">
-       
-          <div class="container">           
-                <table class="table" id="employees">
-                <thead>
-                    <tr>
-                        <th>User ID</th>
-                        <th>Firstname</th>
-                        <th>Lastname</th>
-                        <th>Email</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>18292</td>
-                        <td>Michael </td>
-                        <td>Scott</td>
-                        <td>mscott@dunderMif.com</td>   
-                    </tr>
-                    </tbody>
-              </table>
-          </div>
-      </div>
+                  <div class="col-md-4">
+                      <form id="createShowtime">
+                          <h3><u>ADD/UPDATE SHOWTIMES</u></h3>
+                          <label>MovieTitle</label><br>
+                          <input type="text" placeholder="title" id="title" name="title">
+                          <br>
+                          <label>Theater</label><br>
+                          <input type="text" placeholder="theater number" id="theater" name="theater">
+                          <br>
+                          <label>Month</label><br>
+                          <input type="text" placeholder="05 for May" id="month" name="month">
+                          <br>
+                          <label>Day</label><br>
+                          <input type="text" placeholder="10 for 10th" id="day" name="day">
+                          <br>
+                          <label>Time</label><br>
+                          <input type="text" placeholder="2:30pm" id="time" name="time">
+                          <br> <br>
+                          <button type="submit" value="true"  class="btn btn-success" id="addShowtime" name="addShowtime">ADD SHOWTIME</button><br>
+                          <br>
+                          <button type="submit" value="true" class="btn btn-danger" id="deleteShowtime" name="deleteShowtime">DELETE SHOWTIME</button>
+                          <h5 id="message"></h5>
+                          <#if noMovie> <h5>This Movie doesn't exist or the showtime alredy exist.</h5 </#if>
+
+                      </form>
+                  </div>
+                  <div class="col-md-4">
+                      <h3> <u>UPDATE PRICING</u></h3>
+                      <br>
+                      <form id="updatePricing">
+
+                          <h4>Current Pricing</h4>
+                          <p>Adult: $${adultTicket}</p>
+                          <p>Child: $${childTicket}</p>
+                          <p>Booking Fee: $${bookingFee}</p>
+                          <br><br>
+
+                      <label>Adult Price</label>
+                      <input type="text" placeholder="9.00" id="adultTicket" name="adultTicket">
+                      <br>
+                      <label>Child Price</label>
+                      <input type="text" placeholder="7.00'" id="childTicket" name="childTicket">
+                      <br>
+                          <label>Booking Fee</label>
+                          <input type="text" placeholder="7.00'" id="bookingFee" name="bookingFee">
+                          <br><br>
+                          <button type="submit" value="true"  class="btn btn-info" id="updatePrice" name="updatePrice">UPDATE PRICE</button>
+                          <h5 id="message"></h5>
+                      </form>
+                  </div>
+                  <div class="col-md-4">
+                      <form id="createPromotion">
+                          <h3><u>ADD PROMOTIONS</u></h3>
+                          <label>Discount %</label> <br>
+                          <input type="text" placeholder="10%" id="discount" name="discount">
+                          <br>
+                          <label>Expiration Date</label> <br>
+                          <input type="text" placeholder="10/25/18" id="expiration" name="expiration">
+                          <br><br>
+                          <button type="submit" name="addPromo" id="addPromo" value="true" class="btn btn-success">ADD PROMOTION</button>
+                          <h5 id="message"></h5>
+                      </form>
+                  </div>
+             </div>
           </div>
       </div>
     </div>
@@ -183,20 +252,25 @@
     <div class="container about-container wow fadeInUp">
     <br>
     <div class="container">
-    <form id="movieTable">
+    <form id="movieForm">
     
         <div class="row">
         <br>
-            <div class="col-md-1"> </div>
+            <div class="col-md-1"></div>
             <div class="col-md-4" align="left">
                 <label>Movie Title </label>
-                <input type="text" placeholder="title" id="title" name="title"> 
+                <input type="text" placeholder="title" id="title" name="title">
+                <br>
+                <#if noMovie> <h5>This Movie doesn't exist</h5> </#if>
+                <h5 id="message"> </h5>
+
+
             </div>
         <center>
             <div class="col-md-6">
-                <button type="button" class="btn btn-success" id="addMovie" >ADD MOVIE</button>
-                <button type="button" class="btn btn-info" id="editMovie" >EDIT MOVIE</button>
-                <button type="button" class="btn btn-danger" id="deleteMovie" >DELETE MOVIE</button>
+                <button type="submit" class="btn btn-success" name="addMovie" id="addMovie" value="true" >ADD MOVIE</button>
+                <button type="submit" class="btn btn-info" id="editMovie" name="editMovie" value="true" >EDIT MOVIE</button>
+                <button type="submit" class="btn btn-danger" id="deleteMovie" name="deleteMovie" value="true">DELETE MOVIE</button>
             </div>
             <div class="col-md-1"></div>
         </center>                      
@@ -211,7 +285,7 @@
                     <input type="text" placeholder="seperate names with ';' " id="cast" name="cast">
                     <br><br>
                     <label>Director</label><br>
-                    <input type="text" placeholder="seperate names with ';'" id="Director" name="Director">
+                    <input type="text" placeholder="seperate names with ';'" id="director" name="director">
                 </div>
                 <div class ="col-md-4" align="left">
                     <label>Producer </label><br>
@@ -221,7 +295,7 @@
                     <input type="text" placeholder="synopsis" id="synopsis" name="synopsis">  
                     <br><br>
                     <label>Trailer Picture </label><br>
-                    <input type="text" placeholder="paste url" id="picturePath" name="picturePath">
+                    <input type="text" placeholder="paste url" id="imagePath" name="imagePath">
                 </div>
                 <div class ="col-md-4" align="left"> 
                     <label>Trailer Video</label><br>
@@ -231,7 +305,7 @@
                     <input type="text" placeholder="MPAA_rating" id="rating" name="rating">
                     <br><br>
                     <label>Status </label><br>
-                    <input type="text" placeholder="Status" id="status" name="nowPlaying">
+                    <input type="text" placeholder="Status" id="nowPlaying" name="nowPlaying">
                 </div>
             </div>
     
@@ -239,7 +313,7 @@
     </div>
     <br> <br>
     <div class="row">
-    <center> <h3>Movies</h3>
+    <center> <h3><u>Movies</u></h3>
           <div class="container">           
                 <table class="table">
                 <thead>
@@ -253,24 +327,27 @@
                         <th>TrailerPicture</th>
                         <th>TrailerVideo</th>
                         <th>MPAA_rating</th>
-                        <th>Status</th>
+                        <th>Now Playing</th>
 
                     </tr>
                 </thead>
+
                 <tbody>
-                    <tr>        
-                        <td>Title</td>
-                        <td>Genre</td>
-                        <td>Cast</td>
-                        <td>Director</td>
-                        <td>Producer</td>
-                        <td>Description</td>
-                        <td>TrailerPicture</td>
-                        <td>TrailerVideo</td>
-                        <td>MPAA_rating</td>
-                        <td>Status</td>
+
+                <#list movies as movie>
+                     <tr>
+                        <td>${movie.getTitle()}</td>
+                        <td>${movie.getGenre()}</td>
+                        <td>${movie.getCast()}</td>
+                        <td>${movie.getDirectors()}</td>
+                        <td>${movie.getProducers()}</td>
+                        <td>${movie.getSynopsis()}</td>
+                        <td><img src="${movie.getImagePath()}" width="100" height="150"> </td>
+                        <td>${movie.getTrailerPath()}</td>
+                        <td>${movie.getRating()}</td>
+                        <td>${movie.getNowPlaying()}</td>
                     </tr>
-                    
+                </#list>
                     </tbody>
               </table>
           </div>
@@ -312,6 +389,7 @@
 
   <!-- Template Specisifc Custom Javascript File -->
   <script src="Resources/js/custom.js"></script>
+  <script src="Resources/js/home.js"></script>
 
 
 

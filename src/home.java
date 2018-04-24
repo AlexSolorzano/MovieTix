@@ -57,7 +57,6 @@ public class home extends HttpServlet{
                     	if(aLevel==0)
                     	{
 							welcomeName=u.getUserID();
-							//map.put("loggedIn",true);
 							session.setAttribute("user", welcomeName);//Store an attribute named user with value
 
 						}else if(aLevel==1)//They're a manager
@@ -68,14 +67,16 @@ public class home extends HttpServlet{
 							response.sendRedirect("/MovieTix/profile");
 
 					}
-                    else
-                        map.put("vMsg",true);
+                    else {
+						map.put("vMsg", true);
+					}
 
                 }
             }
-            else
-                map.put("eMsg",true);
-        
+            else {
+
+				map.put("eMsg", true);
+			}
 
             if(Profile.loggedOut)
 			{
@@ -83,6 +84,27 @@ public class home extends HttpServlet{
 				map.put("loggedIn",false);
 			}
             map.put("user",welcomeName);
+
+
+
+
+
+
+            //MOVIE SECTION
+			ArrayList<Movie> movieList = c1.movieList();
+			map.put("movies",movieList);
+
+			HttpSession session = request.getSession();
+			String mtitle = request.getParameter("goToMovie");
+			if (mtitle!=null && !mtitle.equals(""))
+			{
+				session.setAttribute("title", mtitle);
+				response.sendRedirect("/MovieTix/moviePage");
+			}
+
+
+
+
 			Template template = cfg.getTemplate("index.ftl");
 			template.process(map,out);
 		}

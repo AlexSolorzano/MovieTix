@@ -23,6 +23,10 @@ public class manager extends HttpServlet {
         try {
             Controller c1 = new Controller();
 
+
+            ArrayList<Booking> list = c1.getBookingList();
+            map.put("tickets",list);
+
             Template template = cfg.getTemplate("manager.ftl");
             template.process(map, out);
         } catch (Exception e) {

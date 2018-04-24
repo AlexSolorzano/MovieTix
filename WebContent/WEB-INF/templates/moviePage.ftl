@@ -89,29 +89,29 @@
     <div class="container wow fadeInUp">
       <div class="row">
         <div class="col-md-12">
-          <h3 class="section-title">BLACK PANTHER</h3>
+          <h3 class="section-title">${title}</h3>
           <div class="section-title-divider"></div>
         </div>
       </div>
     </div>
+
     <div class="container about-container wow fadeInUp">
       <div class="row">
-        <div class="col-md-7 col-md-push-5 about-content">
-          <h2 class="about-title">PG-13 | 2h 14min | Action, Adventure, Sci-Fi | 16 February 2018 (USA)</h2>
-          <p class="about-text">
-            T'Challa, the King of Wakanda, rises to the throne in the isolated, technologically advanced African nation, but his claim is challenged by a vengeful outsider who was a childhood victim of T'Challa's father's mistake.
-              <br>
-<b>Director:</b> Ryan Coogler<br>
-<b>Writers:</b> Ryan Coogler, Joe Robert Cole | 2 more credits<br>
-<b>Stars:</b> Chadwick Boseman, Michael B. Jordan, Lupita Nyong'o
-          </p>
-          
-   
-<!--  <div class="embed-responsive embed-responsive-4by3">-->
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/xjDjIWPwcPU" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-<!--x</div>-->
+          <div class="col-md-5">
+              <img src="${imagePath}" height="552" width="380">
+          </div>
+        <div class="col-md-6">
+          <h4>Rated: ${rating} | Genre:  ${genre} | Now Playing: ${nowPlaying} </h4>
+         <hr style="width:5px">
+          <h5> <b>Director: </b> ${directors}<p>   </p><b>Producers: </b> ${producers}<br></h5>
+            <h5><b>Cast: </b> ${cast}</h5>
+            <br>
+          <h5>
+           <center>${synopsis}</center>
+          </h5>
 
-        </div>
+            <iframe width="560" height="315" src="${trailerPath}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          </div>
       </div>
     </div>
   </section>
@@ -127,7 +127,7 @@
           <p class="subscribe-text"> Click on the link to select a time and date to view this movie</p>
         </div>
         <div class="col-md-4 subscribe-btn-container">
-          <a class="subscribe-btn" href="/MovieTix/ticketSeating">Buy</a>
+            <form id="buyTicket"> <button type="submit" value="true" name="buyMovie" id="buyMovie" class="subscribe-btn">Buy</button></form>
         </div>
       </div>
     </div>
@@ -154,7 +154,7 @@
         </div>
         <div class="col-md-9">
           <div class="quote">
-            <b><img src="Resources/img/quote_sign_left.png" alt=""></b> AHHHH stop! This movie almost made me drop my croissant! It really buttered my crispy flakes.  <small><img src="Resources/img/quote_sign_right.png" alt=""></small>
+            <b><img src="Resources/img/quote_sign_left.png" alt=""></b> AHHHH stop! This movie almost made me drop my croissant! It really buttered my crispy flakes. I almost mistook Shalissa for beyonce. Major faiL!!!  <small><img src="Resources/img/quote_sign_right.png" alt=""></small>
           </div>
         </div>
       </div>
