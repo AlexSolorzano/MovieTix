@@ -94,28 +94,40 @@
                         <div class="row">
                     <div class="col-md-9"></div>
                             <div class="col-md-2">
-                      <button class="btn btn-warning">REFUND TICKET</button>
-                  </div>
-              </div>
-                        <br>
+                                <form id="refundForm">
+                                    <label>Ticket ID</label>
+                                    <input type="text" placeholder="ticketID" name="ticketID" id="ticketID"/>
+                                     <button type="submit" value="true" name="refundButton" id="refundButton" class="btn btn-primary">REFUND TICKET</button>
+                                </form>
+                                <#if msg2>
+                                    <h5>Sorry, it's too late to refund you ticket.</h5>
+                                </#if>
+
+                            </div>
+              </div><br>
                 <table class="table">
                 <thead>
                     <tr>
                         <th>Ticket Number</th>
                         <th>Movie</th>
-                        <th>Date Purchased</th>
-                        <th>Time of Movie</th>
+                        <th>Row</th>
+                        <th>Col</th>
+                        <th>Date</th>
+                        <th>Time </th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>18292</td>
-                        <td>Black Panther </td>
-                        <td>02/15/18</td>
-                        <td>6:00pm</td>             
-                    </tr>
-                    </tbody>
-                          </table>
+                 <#list bookings as booking>
+                        <tr>
+                            <td>${booking.getTicketID()}</td>
+                            <td>${booking.getTitle()}</td>
+                            <td>${booking.getRow()}</td>
+                            <td>${booking.getCol()}</td>
+                            <td>${booking.getDate()}</td>
+                            <td>${booking.getTime()}</td>
+                        </tr>
+                 </#list>
+                    </tbody></table>
                     </div>
                 </div>
 
@@ -199,7 +211,7 @@
                         <div class="panel-body">
                             <div class="form-group">
                                 <div class="pull-left">
-                                    <button class="btn btn-info" name="submitInfoChange" id="submitInfoChange">SUBMIT </button>
+                                    <button class="btn btn-info" type="submit" name="submitInfoChange" id="submitInfoChange">SUBMIT </button>
                                 </div>
                                 <br> <br>
                                 <h5 id="message"></h5>

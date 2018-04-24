@@ -29,14 +29,18 @@ public class Movie {
     private String imagePath;
     private String trailerPath;
     private String rating;
-    private int nowPlaying;
+    private String nowPlaying;
+
+
+   public Movie(){}
+
 
     /*
      * Movies()
      * -----------------------------
      * this is our movies constructor for creating new movies
      */
-    public Movie(String title, String genre, String cast, String poducers, String directors, String synopsis, String imagePath, String trailerPath, String rating, int nowPlaying) {
+    public Movie(String title, String genre, String cast, String producers, String directors, String synopsis, String imagePath, String trailerPath, String rating, String nowPlaying) {
         this.title = title;
         this.genre = genre;
         this.cast = cast;
@@ -73,11 +77,11 @@ public class Movie {
         this.rating = rating;
     }
 
-    public int getNowPlaying() {
+    public String getNowPlaying() {
         return nowPlaying;
     }
 
-    public void setNowPlaying(int nowPlaying) {
+    public void setNowPlaying(String nowPlaying) {
         this.nowPlaying = nowPlaying;
     }
 

@@ -244,44 +244,7 @@
                                         </#if>  
                                     <h5 id="message"></h5>
                                  </center>
-                                
-                                <!-- FANCY BUTTON STARTS HERE -->
-                                <div class="form-group">
-                                    <!-- Button -->                                        
-                                    <div class="col-md-offset-3 col-md-9">
-                                          
-                                        <!-- Modal -->
-                                        <!-- Trigger the modal with a button -->
-                                        <!--<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal" id="signUpButton">Sign Up</button>
-                                        <!--<div class="modal fade" id="myModal" role="dialog">
-                                            <div class="modal-dialog">
-                                            <!-- Modal content-->
-                                            <!--<div class="modal-content">
-                                                <div class="modal-header">
-                                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                                    <h4 class="modal-title">Account Confirmation</h4>
-                                                </div>
-                                                    <div class="modal-body">
-                                                        <p>You've officially been signed up, proceed to the login page.</p>
-                                                    </div>
-                                                <div class="modal-footer">
-                                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        </div>-->
-                                        <span style="margin-left:8px;"></span>  
-                                    </div>
-                                
-                               
-                                    
-<!--
-                                    <div class="col-md-offset-3 col-md-9">
-                                        <button id="btn-fbsignup" type="button" class="btn btn-primary"><i class="icon-facebook"></i>Sign Up with Facebook</button>
-                                    </div>                                           
--->
-                                        
-                                </div>
+
                                 
                                 
                                 
@@ -302,234 +265,48 @@
   Movie Listing Section
   ============================-->
   <section id="movieListing">
-      
-<div class="container wow fadeInUp">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-            <h3 class="section-title">Movie Listings</h3>
-                <div class="section-title-divider"></div>
-            <p class="section-description"> </p>
-        </div>
-        <input class="form-control" id="myInput" type="text" placeholder="Search..">
-        <br>
-        <div id="myDIV">
-            <div class="row">
-            <div class="col-md-2">
-                <div class="filterDiv thriller mystery">
-                    <a class="portfolio-item" style="background-image: url(Resources/img/blackPanther.jpg);" href="/MovieTix/moviePage">
-                        <div class="details">
-                        <h4>Black Panther</h4>
-                            <span>February 16th</span>
-                                <br>
-                                   Fantasy/Science fiction<br>
-                                     Rated: PG-13
-                        </div>
-                    </a>
-                </div>
-                </div>
-
-                <div class="col-md-2">
-                <div class="filterDiv thriller mystery">
-                    <a class="portfolio-item" style="background-image: url(Resources/img/redSparrow.jpg);" href="">
-                        <div class="details">
-                        <h4>Red Sparrow</h4>
-                            <span>March 2nd</span>
-                                <br>
-                                    Thriller film/Mystery
-                                <br>
-                                    Rated: R
-                        </div>
-                    </a>
-                </div>
-                </div>
-                <div class="col-md-2">
-                <div class="filterDiv thriller fantasy">
-                    <a class="portfolio-item" style="background-image: url(Resources/img/annihalation.jpg);" href="">
-                    <div class="details">
-                    <h4>Annihalation</h4>
-                        <span>February 23rd</span>
-                        <br>
-                        Thriller film/Fantasy
-                        <br>
-                        Rated: R
-                    </div>
-                    </a>
-                </div>
-                </div>
-                <div class="col-md-2">
-                <div class="filterDiv drama crime">
-                    <a class="portfolio-item" style="background-image: url(Resources/img/deathWish.jpg);" href="">
-                    <div class="details">
-                        <h4>Death Wish</h4>
-                        <span>March 2nd</span>
-                        <br>
-                        Drama/Crime 
-                        <br>
-                        Rated: R
-                    </div>
-                    </a>
-                </div>
-                </div>
-                <div class="col-md-2">
-                <div class="filterDiv mystery crime">
-                    <a class="portfolio-item" style="background-image: url(Resources/img/gameNight.jpg);" href="">
-                    <div class="details">
-                    <h4>Game Night</h4>
-                    <span>February 23rd</span>
-                    <br>
-                    Mystery/Crime film 
-                    <br>
-                    Rated: R
-                    </div>
-                </a>
-                </div>
-                </div>
-                
-                <div class="col-md-2">
-                <div class="filterDiv fantasy adventure">
-                <a class="portfolio-item" style="background-image: url(Resources/img/rascalRebelRabbit.jpg);" href="">
-                    <div class="details">
-                    <h4>Rascal Rebel Rabbit</h4>
-                    <span>February 9th</span>
-                    <br>
-                    Fantasy/Adventure
-                    <br>
-                    Rated: PG
-                    </div>
-                </a>
-                </div>
-                </div>
-                
-                <div class="col-md-2">
-                <div class="filterDiv thriller drama">
-                <a class="portfolio-item" style="background-image: url(Resources/img/fiftyShadesFreed.jpg);" href="">
-                <div class="details">
-                    <h4>Fifty Shades Freed</h4>
-                    <span>February 9th</span>
-                    <br>
-                    Drama/Thriller film
-                    <br>
-                    Rated: R
-                    </div>
-                </a>
-                </div>
-                </div>
-                
-            <div class="col-md-2">
-            <div class="filterDiv fantasy drama">
-                <a class="portfolio-item" style="background-image: url(Resources/img/everyDay.jpg);" href="">
-                <div class="details">
-                <h4>Every day(2018)</h4>
-                <span>February 9th</span>
-                <br>
-                    Fantasy/Drama
-                <br>
-                    Rated: PG-13
-                </div>
-                </a>
-            </div>
-            </div>
-            <div class="col-md-2">
-            <div class="filterDiv drama romance">
-                <a class="portfolio-item" style="background-image: url(Resources/img/greatestShowman.jpg);" href="">
-                    <div class="details">
-                        <h4>The Greatest Showman</h4>
-                            <span>December 20th</span>
-                            <br>
-                            Drama/Romance
-                            <br>
-                            Rated: PG
-                            </div>
-                </a>
-            </div>
-            </div>
-            <div class="col-md-2">
-            <div class="filterDiv thriller fantasy">
-                <a class="portfolio-item" style="background-image: url(Resources/img/jumanii.jpg);" href="">
-                <div class="details">
-                    <h4>Jumanji: Welcome to the Jungle</h4>
-                    <span>December 20th</span>
-                    <br>
-                    Fantasy/Thriller
-                    <br>
-                    Rated: PG
-                    </div>
-                </a>
-            </div>
-            </div>
-            <div class="col-md-2">
-            <div class="filterDiv fantasy action">
-                <a class="portfolio-item" style="background-image: url(Resources/img/earlyMan.jpg);" href="">
-                <div class="details">
-                    <h4>Early Man</h4>
-                    <span>February 16th</span>
-                    <br>
-                    Fantasy/Action
-                    <br>
-                    Rated: PG
-                </div>
-            </a>
-            </div>
-            </div>
-            
-            <div class="col-md-2">
-            <div class="filterDiv thriller drama">
-            <a class="portfolio-item" style="background-image: url(Resources/img/the1517.jpg);" href="">
-                <div class="details">
-                <h4>The 15:17 to Paris</h4>
-                <span>February 9th</span>
-                <br>
-                Drama/Thriller film
-                <br>
-                Rated: P
-                </div>
-                </a>
-                </div>
-            </div>
-            </div>
-        </div> <!---Container--->
-    </div>
-    </div>
-  </section>
-    
-    <!--==========================
-  Upcoming movies Section
-  ============================--> 
-    
-    
-    <section id="upcomingMovies">
     <div class="container wow fadeInUp">
-      <div class="row">
-        <div class="col-md-12">
-          <h3 class="section-title">Upcoming Movies</h3>
-          <div class="section-title-divider"></div>
-          <p class="section-description">Coming soon to theaters</p>
-        </div>
-      </div>
-        <div class="row">
-        <div class="col-md-4"></div>
-        <div class="col-md-2">
-          <a class="portfolio-item" style="background-image: url(Resources/img/aWrinkleInTime.jpg);" href="">
-            <div class="details">
-              <h4>A Wrinkle in Time</h4>
-              <span>March 9th</span>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h3 class="section-title">Movie Listings</h3>
+                <div class="section-title-divider"></div>
+                </div>
             </div>
-          </a>
-        </div>
-            <div class="col-md-2">
-          <a class="portfolio-item" style="background-image: url(Resources/img/tombRaider.jpg);" href="">
-            <div class="details">
-              <h4>Tomb Raider</h4>
-              <span>March 16th</span>
+            <div class="row">
+                <center>
+                <div class="col-md-6">
+                    <h4>Rating</h4>
+                    <button type="submit" value="r" id="ratedR" name="ratedR" class="btn btn-primary">R</button>
+                    <button type="submit" value="pg13" id="ratedPG13" name="ratedPG13" class="btn btn-success">PG-13</button>
+                    <button type="submit" value="pg" id="ratedPG" name="ratedPG" class="btn btn-warning">PG</button>
+                </div>
+                <div class="col-md-6">
+                    <h4>Genre</h4>
+                    <button type="submit" value="action" id="action" name="action" class="btn btn-primary">action</button>
+                    <button type="submit" value="adventure" id="adventure" name="adventure" class="btn btn-success">adventure</button>
+                    <button type="submit" value="thriller" id="thriller" name="thriller" class="btn btn-warning">thriller</button>
+                    <button type="submit" value="drama" id="drama" name="drama" class="btn btn-danger">drama</button>
+                </div>
+                </center>
             </div>
-          </a>
-        </div>
-        <div class="col-md-4"></div>
-
-        </div>
+            <br>
+            <div class="row">
+                <#list movies as movie>
+                    <div class="col-sm-3">
+                        <form id="sendMovie">
+                        <button type="submit" value="${movie.getTitle()}" name="goToMovie" id="goToMovie" class="btn-outline-primary"t">
+                            <img src="${movie.getImagePath()}" height="275" widght="180">
+                        </button>
+                        </form>
+                    </div>
+                </#list>
+            </div>
+            </div>
+    </div>
     </div>
   </section>
+    
 
     <!--==========================
   Subscrbe Section

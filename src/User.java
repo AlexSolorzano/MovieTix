@@ -28,6 +28,20 @@ public class User {
     {
         
     }
+
+    public User( String userID, String firstname, String lastname, String email, String password,
+                 String address,String subscribed, int authorization, String suspended)
+    {
+        this.firstname = firstname;
+        this.lastname = lastname;
+        this.email = email;
+        this.password = password;
+        this.authorization=authorization;
+        this.address=address;
+        this.subscribed=subscribed;
+        this.suspended=suspended;
+        this.userID=userID;
+    }
    //SIGN UP
     public User(String fname, String lname, String email, String password) {
         this.firstname = fname; 

@@ -1,0 +1,926 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="329b85f3-5227-47c6-b36b-ee39d5f27a84" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/WebContent/Resources/js/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/WebContent/Resources/js/home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebContent/WEB-INF/classes/Booking.class" beforeDir="false" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/classes/Booking.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebContent/WEB-INF/classes/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/classes/Controller.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebContent/WEB-INF/classes/Home.class" beforeDir="false" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/classes/Home.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebContent/WEB-INF/classes/Movie.class" beforeDir="false" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/classes/Movie.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebContent/WEB-INF/classes/PaymentInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/classes/PaymentInfo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebContent/WEB-INF/classes/Profile.class" beforeDir="false" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/classes/Profile.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebContent/WEB-INF/classes/Promotion.class" beforeDir="false" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/classes/Promotion.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebContent/WEB-INF/classes/Seat.class" beforeDir="false" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/classes/Seat.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebContent/WEB-INF/classes/SendMail$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/classes/SendMail$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebContent/WEB-INF/classes/SendMail$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/classes/SendMail$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebContent/WEB-INF/classes/SendMail$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/classes/SendMail$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebContent/WEB-INF/classes/SendMail.class" beforeDir="false" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/classes/SendMail.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebContent/WEB-INF/classes/Ticket.class" beforeDir="false" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/classes/Ticket.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebContent/WEB-INF/classes/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/classes/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebContent/WEB-INF/classes/admin.class" beforeDir="false" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/classes/admin.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebContent/WEB-INF/classes/jdbcConnector.class" beforeDir="false" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/classes/jdbcConnector.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebContent/WEB-INF/classes/manager.class" beforeDir="false" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/classes/manager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebContent/WEB-INF/classes/moviePage.class" beforeDir="false" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/classes/moviePage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebContent/WEB-INF/classes/purchase.class" beforeDir="false" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/classes/purchase.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebContent/WEB-INF/classes/ticketSeating.class" beforeDir="false" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/classes/ticketSeating.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebContent/WEB-INF/templates/admin.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/templates/admin.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebContent/WEB-INF/templates/index.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/templates/index.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebContent/WEB-INF/templates/manager.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/templates/manager.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebContent/WEB-INF/templates/moviePage.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/templates/moviePage.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebContent/WEB-INF/templates/profile.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/templates/profile.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebContent/WEB-INF/templates/purchase.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/templates/purchase.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebContent/WEB-INF/templates/ticketSeating.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/WebContent/WEB-INF/templates/ticketSeating.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Booking.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Booking.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Movie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Movie.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PaymentInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PaymentInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Profile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Profile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Promotion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Promotion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Seat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Seat.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SendMail.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SendMail.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Ticket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ticket.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/admin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/home.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/home.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/jdbcConnector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/jdbcConnector.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/manager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/manager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/moviePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/moviePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/purchase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/purchase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ticketSeating.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ticketSeating.java" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/out/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="admin.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/admin.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="585">
+              <caret line="39" column="22" selection-start-line="39" selection-start-column="22" selection-end-line="39" selection-end-column="22" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="manager.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/manager.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="420">
+              <caret line="28" selection-start-line="28" selection-end-line="28" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="manager.ftl" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/templates/manager.ftl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="249">
+              <caret line="94" column="45" selection-start-line="94" selection-start-column="45" selection-end-line="94" selection-end-column="45" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="admin.ftl" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/templates/admin.ftl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="40">
+              <caret line="270" column="19" selection-start-line="270" selection-start-column="19" selection-end-line="270" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SendMail.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/SendMail.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="340">
+              <caret line="268" column="61" selection-start-line="268" selection-start-column="61" selection-end-line="268" selection-end-column="61" />
+              <folding>
+                <element signature="method#sendVerification#0;class#SendMail#0" />
+                <element signature="method#sendPromo#0;class#SendMail#0" />
+                <element signature="e#4610#4881#0" expanded="true" />
+                <element signature="e#4880#4881#0" expanded="true" />
+                <element signature="method#sendPassword#0;class#SendMail#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="purchase.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/purchase.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="322">
+              <caret line="130" column="36" selection-start-line="130" selection-start-column="36" selection-end-line="130" selection-end-column="36" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="home.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/home.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="71">
+              <caret line="60" selection-start-line="59" selection-start-column="28" selection-end-line="60" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Profile.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Profile.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="291">
+              <caret line="88" column="13" selection-start-line="88" selection-start-column="13" selection-end-line="88" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="home.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/WebContent/Resources/js/home.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="235">
+              <caret line="69" column="17" selection-start-line="69" selection-start-column="17" selection-end-line="69" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="purchase.ftl" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/templates/purchase.ftl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="266">
+              <caret line="378" column="56" selection-start-line="378" selection-start-column="56" selection-end-line="378" selection-end-column="56" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>change</find>
+      <find>disable</find>
+      <find>sup</find>
+      <find>updatePrice</find>
+      <find>author</find>
+      <find>promo</find>
+      <find>delete Show</find>
+      <find>showtime</find>
+      <find>createTheater</find>
+      <find>i</find>
+      <find>subscribed</find>
+      <find>createSeating</find>
+      <find>create</find>
+      <find>deleteShow</find>
+      <find>insert</find>
+      <find>addTicket</find>
+      <find>ticket</find>
+      <find>discount</find>
+      <find>savepayment</find>
+      <find>total</find>
+      <find>getPrice</find>
+      <find>savePayment</find>
+      <find>getprice</find>
+      <find>form</find>
+      <find>showtimes</find>
+      <find>refunded</find>
+      <find>refundedTicket</find>
+      <find>bookinglist</find>
+      <find>addMovie</find>
+      <find>coupon</find>
+    </findStrings>
+    <replaceStrings>
+      <replace />
+    </replaceStrings>
+    <dirStrings>
+      <dir>$PROJECT_DIR$/src</dir>
+    </dirStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/WebContent/WEB-INF/templates/admin.html" />
+        <option value="$PROJECT_DIR$/src/Movie.java" />
+        <option value="$PROJECT_DIR$/src/showtime.java" />
+        <option value="$PROJECT_DIR$/src/DateTIme.java" />
+        <option value="$PROJECT_DIR$/src/Pricing.java" />
+        <option value="$PROJECT_DIR$/src/moviePage.java" />
+        <option value="$PROJECT_DIR$/WebContent/WEB-INF/templates/moviePage.ftl" />
+        <option value="$PROJECT_DIR$/src/User.java" />
+        <option value="$PROJECT_DIR$/src/Promotion.java" />
+        <option value="$PROJECT_DIR$/WebContent/WEB-INF/templates/admin.ftl" />
+        <option value="$PROJECT_DIR$/src/Showtime_obj.java" />
+        <option value="$PROJECT_DIR$/src/home.java" />
+        <option value="$PROJECT_DIR$/WebContent/WEB-INF/templates/showtime.ftl" />
+        <option value="$PROJECT_DIR$/src/showtimes.java" />
+        <option value="$PROJECT_DIR$/src/PaymentInfo.java" />
+        <option value="$PROJECT_DIR$/src/ticketSeating.java" />
+        <option value="$PROJECT_DIR$/WebContent/WEB-INF/templates/ticketSeating.ftl" />
+        <option value="$PROJECT_DIR$/WebContent/WEB-INF/templates/index.ftl" />
+        <option value="$PROJECT_DIR$/src/Seat.java" />
+        <option value="$PROJECT_DIR$/src/OrderHisotry.java" />
+        <option value="$PROJECT_DIR$/src/Ticket.java" />
+        <option value="$PROJECT_DIR$/src/Profile.java" />
+        <option value="$PROJECT_DIR$/WebContent/WEB-INF/templates/profile.ftl" />
+        <option value="$PROJECT_DIR$/src/Controller.java" />
+        <option value="$PROJECT_DIR$/src/manager.java" />
+        <option value="$PROJECT_DIR$/src/Booking.java" />
+        <option value="$PROJECT_DIR$/src/jdbcConnector.java" />
+        <option value="$PROJECT_DIR$/src/admin.java" />
+        <option value="$PROJECT_DIR$/WebContent/Resources/js/home.js" />
+        <option value="$PROJECT_DIR$/WebContent/WEB-INF/templates/purchase.ftl" />
+        <option value="$PROJECT_DIR$/src/SendMail.java" />
+        <option value="$PROJECT_DIR$/WebContent/WEB-INF/templates/manager.ftl" />
+        <option value="$PROJECT_DIR$/src/purchase.java" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="NodePackageJsonFileManager">
+    <packageJsonPaths />
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="10" />
+    <option name="y" value="40" />
+    <option name="width" value="1256" />
+    <option name="height" value="738" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="MovieTix" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MovieTix" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MovieTix" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MovieTix" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MovieTix" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MovieTix" type="462c0819:PsiDirectoryNode" />
+              <item name="WebContent" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MovieTix" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MovieTix" type="462c0819:PsiDirectoryNode" />
+              <item name="WebContent" type="462c0819:PsiDirectoryNode" />
+              <item name="Resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MovieTix" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MovieTix" type="462c0819:PsiDirectoryNode" />
+              <item name="WebContent" type="462c0819:PsiDirectoryNode" />
+              <item name="Resources" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MovieTix" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MovieTix" type="462c0819:PsiDirectoryNode" />
+              <item name="WebContent" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MovieTix" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MovieTix" type="462c0819:PsiDirectoryNode" />
+              <item name="WebContent" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="SearchEverywhereHistoryKey" value="{&#9;null&#9;null" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <properties />
+      <listeners />
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="329b85f3-5227-47c6-b36b-ee39d5f27a84" name="Default" comment="" />
+      <created>1523636122856</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1523636122856</updated>
+      <workItem from="1523636126633" duration="10074000" />
+      <workItem from="1523897175247" duration="125762000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="135836000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="10" y="40" width="1256" height="738" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="8" />
+      <window_info id="Image Layers" order="2" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="right" id="Maven Projects" order="7" />
+      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info id="Capture Tool" order="6" />
+      <window_info id="Designer" order="3" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17515923" />
+      <window_info anchor="right" id="Database" order="6" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.30120483" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info id="UI Designer" order="4" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info id="Favorites" order="5" side_tool="true" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Message" order="0" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/SendMail.java</url>
+          <line>137</line>
+          <properties />
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="9" />
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/Controller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1125">
+          <caret line="86" column="25" selection-start-line="86" selection-start-column="25" selection-end-line="86" selection-end-column="25" />
+          <folding>
+            <element signature="e#733#734#0" expanded="true" />
+            <element signature="e#788#789#0" expanded="true" />
+            <element signature="e#846#847#0" expanded="true" />
+            <element signature="e#892#893#0" expanded="true" />
+            <element signature="e#1732#1733#0" expanded="true" />
+            <element signature="e#1787#1788#0" expanded="true" />
+            <element signature="e#2070#2071#0" expanded="true" />
+            <element signature="e#2107#2108#0" expanded="true" />
+            <element signature="e#2987#2988#0" expanded="true" />
+            <element signature="e#3028#3029#0" expanded="true" />
+            <element signature="e#3575#3576#0" expanded="true" />
+            <element signature="e#3615#3616#0" expanded="true" />
+            <element signature="e#3659#3660#0" expanded="true" />
+            <element signature="e#3691#3692#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/admin.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="32" selection-start-line="32" selection-end-line="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/manager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/templates/manager.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="960">
+          <caret line="64" column="19" selection-start-line="64" selection-start-column="19" selection-end-line="64" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/templates/admin.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="960">
+          <caret line="64" column="15" selection-start-line="64" selection-start-column="15" selection-end-line="64" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/jdbcConnector.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4560">
+          <caret line="306" column="24" selection-start-line="306" selection-start-column="24" selection-end-line="306" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/home.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="19" column="5" lean-forward="true" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/templates/index.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1410">
+          <caret line="94" column="37" selection-start-line="94" selection-start-column="37" selection-end-line="94" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SendMail.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/forgotPassword.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/templates/admin.html" />
+    <entry file="jar://$PROJECT_DIR$/WebContent/WEB-INF/lib/jboss-servlet-api_4.0_spec-1.0.0.Final.jar!/javax/servlet/GenericServlet.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="27" column="16" selection-start-line="27" selection-start-column="16" selection-end-line="27" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DateTIme.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="4" lean-forward="true" selection-start-line="2" selection-start-column="4" selection-end-line="5" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/showtime.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="45" lean-forward="true" selection-end-line="45" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebContent/Resources/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-343">
+          <caret line="567" column="19" selection-start-line="567" selection-start-column="15" selection-end-line="567" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebContent/Resources/js/custom.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/templates/moviePage.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="296">
+          <caret line="129" column="99" selection-start-line="129" selection-start-column="99" selection-end-line="129" selection-end-column="99" />
+          <folding>
+            <element signature="n#style#0;n#hr#0;n#div#1;n#div#0;n#div#1;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/moviePage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="424">
+          <caret line="56" column="64" selection-start-line="56" selection-start-column="64" selection-end-line="56" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Verification.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="48" lean-forward="true" selection-start-line="48" selection-end-line="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Showtime_obj.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
+          <folding>
+            <element signature="e#1160#1161#0" expanded="true" />
+            <element signature="e#1190#1191#0" expanded="true" />
+            <element signature="e#1315#1316#0" expanded="true" />
+            <element signature="e#1336#1337#0" expanded="true" />
+            <element signature="e#1378#1379#0" expanded="true" />
+            <element signature="e#1406#1407#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="42" column="27" selection-start-line="42" selection-start-column="27" selection-end-line="42" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/showtimes.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="57" column="24" selection-start-line="57" selection-start-column="24" selection-end-line="57" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/templates/showtime.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1395">
+          <caret line="93" column="84" selection-start-line="93" selection-start-column="84" selection-end-line="93" selection-end-column="84" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/subscribed.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="19" selection-start-line="23" selection-start-column="8" selection-end-line="23" selection-end-column="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PaymentInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="25" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
+          <folding>
+            <element signature="e#392#393#0" expanded="true" />
+            <element signature="e#416#417#0" expanded="true" />
+            <element signature="e#451#452#0" expanded="true" />
+            <element signature="e#478#479#0" expanded="true" />
+            <element signature="e#509#510#0" expanded="true" />
+            <element signature="e#532#533#0" expanded="true" />
+            <element signature="e#565#566#0" expanded="true" />
+            <element signature="e#592#593#0" expanded="true" />
+            <element signature="e#636#637#0" expanded="true" />
+            <element signature="e#668#669#0" expanded="true" />
+            <element signature="e#718#719#0" expanded="true" />
+            <element signature="e#756#757#0" expanded="true" />
+            <element signature="e#798#799#0" expanded="true" />
+            <element signature="e#828#829#0" expanded="true" />
+            <element signature="e#878#879#0" expanded="true" />
+            <element signature="e#916#917#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Promotion.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="44" column="27" selection-start-line="44" selection-start-column="18" selection-end-line="44" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebContent/Resources/js/purchase.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Pricing.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="5" lean-forward="true" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Movie.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Seat.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/templates/index.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="256">
+          <caret line="278" column="30" selection-start-line="278" selection-start-column="30" selection-end-line="278" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/OrderHisotry.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ticketSeating.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-254">
+          <caret line="51" column="16" selection-start-line="51" selection-start-column="16" selection-end-line="51" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/templates/ticketSeating.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="369">
+          <caret line="142" column="20" selection-start-line="142" selection-start-column="20" selection-end-line="142" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/templates/profile.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="455">
+          <caret line="127" column="29" selection-start-line="127" selection-start-column="29" selection-end-line="127" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Ticket.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="67">
+          <caret line="19" column="25" selection-start-line="19" selection-start-column="25" selection-end-line="19" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="251">
+          <caret line="195" column="32" selection-start-line="195" selection-start-column="32" selection-end-line="195" selection-end-column="32" />
+          <folding>
+            <element signature="e#152#251#0" />
+            <element signature="e#256#480#0" />
+            <element signature="e#485#587#0" />
+            <element signature="e#602#683#0" />
+            <element signature="e#3783#3784#0" expanded="true" />
+            <element signature="e#3832#3833#0" expanded="true" />
+            <element signature="e#3901#3902#0" expanded="true" />
+            <element signature="e#3950#3951#0" expanded="true" />
+            <element signature="e#4059#4060#0" expanded="true" />
+            <element signature="e#4103#4104#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Booking.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
+          <folding>
+            <element signature="e#315#316#0" expanded="true" />
+            <element signature="e#335#336#0" expanded="true" />
+            <element signature="e#360#361#0" expanded="true" />
+            <element signature="e#380#381#0" expanded="true" />
+            <element signature="e#409#410#0" expanded="true" />
+            <element signature="e#430#431#0" expanded="true" />
+            <element signature="e#459#460#0" expanded="true" />
+            <element signature="e#480#481#0" expanded="true" />
+            <element signature="e#688#689#0" expanded="true" />
+            <element signature="e#715#716#0" expanded="true" />
+            <element signature="e#565#566#0" expanded="true" />
+            <element signature="e#589#590#0" expanded="true" />
+            <element signature="e#627#628#0" expanded="true" />
+            <element signature="e#653#654#0" expanded="true" />
+            <element signature="e#686#687#0" expanded="true" />
+            <element signature="e#710#711#0" expanded="true" />
+            <element signature="e#753#754#0" expanded="true" />
+            <element signature="e#787#788#0" expanded="true" />
+            <element signature="e#825#826#0" expanded="true" />
+            <element signature="e#851#852#0" expanded="true" />
+            <element signature="e#274#275#0" expanded="true" />
+            <element signature="e#301#302#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/jdbcConnector.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="1044" column="75" selection-start-line="1044" selection-start-column="75" selection-end-line="1044" selection-end-column="75" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/admin.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="585">
+          <caret line="39" column="22" selection-start-line="39" selection-start-column="22" selection-end-line="39" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Profile.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="291">
+          <caret line="88" column="13" selection-start-line="88" selection-start-column="13" selection-end-line="88" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/templates/admin.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="40">
+          <caret line="270" column="19" selection-start-line="270" selection-start-column="19" selection-end-line="270" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SendMail.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="268" column="61" selection-start-line="268" selection-start-column="61" selection-end-line="268" selection-end-column="61" />
+          <folding>
+            <element signature="method#sendVerification#0;class#SendMail#0" />
+            <element signature="method#sendPromo#0;class#SendMail#0" />
+            <element signature="e#4610#4881#0" expanded="true" />
+            <element signature="e#4880#4881#0" expanded="true" />
+            <element signature="method#sendPassword#0;class#SendMail#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/manager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="28" selection-start-line="28" selection-end-line="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/templates/manager.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="249">
+          <caret line="94" column="45" selection-start-line="94" selection-start-column="45" selection-end-line="94" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebContent/Resources/js/home.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="235">
+          <caret line="69" column="17" selection-start-line="69" selection-start-column="17" selection-end-line="69" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/home.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="71">
+          <caret line="60" selection-start-line="59" selection-start-column="28" selection-end-line="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/templates/purchase.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="378" column="56" selection-start-line="378" selection-start-column="56" selection-end-line="378" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/purchase.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="130" column="36" selection-start-line="130" selection-start-column="36" selection-end-line="130" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

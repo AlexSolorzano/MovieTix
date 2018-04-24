@@ -17,55 +17,45 @@ import java.util.Date;
 import java.sql.Time;
 
 public class Ticket {
-    private String ticketID;
-    private String movieTitle;
-    private String showDate; 
-    private String showTime;
+    private int ticketID;
+    private int showtimeID;
     private int row;
     private int col;
+    private double price;
     
-    public Ticket(int userID, String movieTitle, String showDate, String showTime, int row, int col)
+    public Ticket(int showtimeID, int row, int col, double price)
     {
-        this.ticketID="t_"+userID+"m_"+movieTitle+"s_"+row+col;
-        this.movieTitle = movieTitle;
-        this.showDate = showDate;
-        this.showTime = showTime;
+        this.ticketID=ticketID;
+       this.showtimeID=showtimeID;
         this.row = row;
         this.col = col;
+        this.price=price;
     }
     
-    public String getTicketID() {
+    public int getTicketID() {
         return ticketID;   
     }
     
-    public void setTicketID(String id) {
+    public void setTicketID(int id) {
         this.ticketID = id;   
     }
 
-    public String getMovieTitle() {
-        return movieTitle;
+    public void setPrice(double price) {
+        this.price = price;
     }
 
-    public void setMovieTitle(String movieTitle) {
-        this.movieTitle = movieTitle;
+    public double getPrice() {
+        return price;
     }
 
-    public String getShowDate() {
-        return showDate;
+    public int getShowtimeID() {
+        return showtimeID;
     }
 
-    public void setShowDate(String showDate) {
-        this.showDate = showDate;
+    public void setShowtimeID(int showtimeID) {
+        this.showtimeID = showtimeID;
     }
 
-    public String getShowTime() {
-        return showTime;
-    }
-
-    public void setShowTime(String showTime) {
-        this.showTime = showTime;
-    }
-    
     public int getRow() {
         return row;   
     }

@@ -64,8 +64,7 @@ Header Section
                 <li class="menu-active"><a href="#hero"></a></li>
                 <li><a href="/MovieTix/home">Log out </a></li>
                 <li><a href="#upcomingMovies">Manage Employees</a></li>
-                <li><a href="#about">Manage Pricing</a></li>
-                <li><a href="#testimonials">Sales Reports</a></li>
+                <li><a href="#movieListing">Sales Reports</a></li>
 
             </ul>
         </nav>
@@ -93,14 +92,23 @@ Header Section
                                 <th>Firstname</th>
                                 <th>Lastname</th>
                                 <th>Email</th>
+                                <th>Suspended</th>
                             </tr>
                             </thead>
                             <tbody>
                             <tr>
-                                <td>18292</td>
+                                <td>mscott</td>
                                 <td>Michael </td>
                                 <td>Scott</td>
                                 <td>mscott@dunderMif.com</td>
+                                <td>true</td>
+                            </tr>
+                            <tr>
+                                <td>jhalpert</td>
+                                <td>Jimithy </td>
+                                <td>Halpert</td>
+                                <td>jhalpert@dunderMif.com</td>
+                                <td>false</td>
                             </tr>
                             </tbody>
                         </table>
@@ -110,19 +118,8 @@ Header Section
         </div>
     </div>
 </section>
-<section id="about">
-    <div class="container wow fadeInUp">
-        <div class="row">
-            <div class="col-md-12">
-                <h3 class="section-title">Manage Pricing</h3>
-                <div class="section-title-divider"></div>
-            </div>
-            <p>INSERT FORM FOR EDITING TICKET PRICES AND PROMOTIONS</p>
-        </div>
-    </div>
-</section>
 
-<section id="testimonials">
+<section id="movieListing">
     <br><br>
     <div class="container wow fadeInUp">
         <div class="row">
@@ -135,8 +132,94 @@ Header Section
         </div>
     </div>
     <div class="container about-container wow fadeInUp">
+        <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <button type="button" class="btn btn-success">ADD EMPLOYEE</button>
+                <button type="button" class="btn btn-danger">DELETE EMPLOYEE</button>
+            <table class="table">
+                <thead>
+                <tr>
+                    <th>Ticket ID</th>
+                    <th>Title</th>
+                    <th>Ticket row</th>
+                    <th>Ticket col</th>
+                    <th>Date</th>
+                    <th>Time</th>
+                </tr>
+                </thead>
+                <tbody>
+                <#list tickets as ticket>
+                    <tr>
+                        <td>${ticket.getTicketID()}</td>
+                        <td>${ticket.getTitle()}</td>
+                        <td>${ticket.getRow()}</td>
+                        <td>${ticket.getCol()}</td>
+                        <td>${ticket.getDate()}</td>
+                        <td>${ticket.getTime()}</td>
+                    </tr>
+                </#list>
+                </tbody>
+            </table>
+                </div>
+                <div class="col-md-4">
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th>Theaters</th>
+                        <th> Capacity </th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td> Theater 1</td>
+                            <td>
+                                <div class="progress">
+                                    <div class="progress-bar progress-bar-striped active" role="progressbar"
+                                         aria-valuenow="7" aria-valuemin="0" aria-valuemax="30" style="width:5%">
+                                    </div>
+                                </div>
+                            </td>
 
-      <p> [ INSERT SALES REPORTS ] </p>
+                        </tr>
+                        <tr>
+                            <td> Theater 2</td>
+                            <td>
+                                <div class="progress">
+                                    <div class="progress-bar progress-bar-striped active" role="progressbar"
+                                         aria-valuenow="5" aria-valuemin="0" aria-valuemax="30" style="width:10%">
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td> Theater 3</td>
+                            <td>
+                                <div class="progress">
+                                    <div class="progress-bar progress-bar-striped active" role="progressbar"
+                                         aria-valuenow="2" aria-valuemin="0" aria-valuemax="30" style="width:10%">
+                                    </div>
+                                </div>
+                            </td>
+
+                        </tr>
+                        <tr>
+                            <td> Theater 4</td>
+                            <td>
+                                <div class="progress">
+                                    <div class="progress-bar progress-bar-striped active" role="progressbar"
+                                         aria-valuenow="10" aria-valuemin="0" aria-valuemax="30" style="width:10%">
+                                    </div>
+                                </div>
+                            </td>
+
+                        </tr>
+                    </tbody>
+                </table>
+                </div>
+        </div>
+        </div>
+
     </div>
     <br><br>
 </section>
